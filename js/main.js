@@ -4,7 +4,11 @@ const hero = new Swiper('.swiper-hero', {
   autoplay: {
     delay: 3000,
   },
-
+  breakpoints: {
+    1024: {
+      height: 770,
+    }
+  }
 
 });
 
@@ -14,7 +18,6 @@ const gallery = new Swiper('.swiper-gallery', {
   slidesPerGroup: 1,
   slidesPerColumn: 2,
   slidesPerColumnFill: 'row',
-
 
   navigation: {
     nextEl: '.swiper-arrow-right',
@@ -29,18 +32,28 @@ const gallery = new Swiper('.swiper-gallery', {
   },
   watchOverflow: true,
   breakpoints: {
-    // when window width is >= 320px
     320: {
-      slidesPerView: 2,
-      spaceBetween: 20
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      slidesPerColumn: 1,
     },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 30
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      slidesPerColumn: 2,
+      slidesPerColumnFill: 'row',
+      spaceBetween: 35
+    },
+    1024: {
+      height: 595,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      slidesPerColumn: 2,
+      slidesPerColumnFill: 'row',
+      spaceBetween: 35
     },
     1920: {
-      slidesPerView:  3,
+      slidesPerView: 3,
       slidesPerGroup: 3,
       slidesPerColumn: 2,
       slidesPerColumnFill: 'row',

@@ -18,6 +18,8 @@
 <header class="header">
   <div class="header__menu">
 
+    <div class="burger"></div>
+
     <div class="header__menu__logo"><a href="/"><img src="img/logo.svg" alt="Лого"></a></div>
 
     <nav class="header__menu__nav">
@@ -32,22 +34,56 @@
       </ul>
     </nav>
 
-    <div class="account__login"><span class="icon__login"></span>Войти</div>
+    <a href class="account__login main__menu__link">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+          fill="white"/>
+      </svg>
+      Войти</a>
+
+    <div class="main__header__search">
+      <form action="#" method="get" id="search">
+        <button class="btn-none">
+          <label for="main-search-input" aria-label="Поиск">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                    fill="white"/>
+            </svg>
+          </label>
+        </button>
+        <label for="search-input" style="display: none" aria-label="Поиск"></label>
+        <input type="text" id="search-input" placeholder="Поиск по сайту">
+      </form>
+    </div>
 
   </div>
 
   <div class="header__sub">
     <ul class="header__sub__menu">
-      <li class="sub__menu__item"><a href="#" class="sub__menu__link">Реализм</a></li>
-      <li class="sub__menu__item"><a href="#" class="sub__menu__link">Импрессионизм</a></li>
-      <li class="sub__menu__item"><a href="#" class="sub__menu__link">Постимпрессионизм</a></li>
-      <li class="sub__menu__item"><a href="#" class="sub__menu__link">Авангард</a></li>
-      <li class="sub__menu__item"><a href="#" class="sub__menu__link">Футуризм</a></li>
+      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Реализм</a></li>
+      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Импрессионизм</a></li>
+      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Постимпрессионизм</a></li>
+      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Авангард</a></li>
+      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Футуризм</a></li>
     </ul>
 
     <div class="header__search">
       <form action="#" method="get" id="main-search">
-        <label for="main-search-input" aria-label="Поиск"></label>
+        <button class="btn-none">
+          <label for="main-search-input" aria-label="Поиск">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                    fill="white"/>
+            </svg>
+          </label>
+        </button>
         <input type="text" id="main-search-input" placeholder="Поиск по сайту">
       </form>
     </div>
@@ -83,7 +119,7 @@
   <section class="section">
     <div class="wrapper">
       <h2 class="title">О нас</h2>
-      <p>Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+      <p class="about__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
     </div>
   </section>
 
@@ -95,11 +131,14 @@
         <h2 class="title">Галерея</h2>
         <div class="gallery__form">
           <div class="gallery__filter__desc">Фильтровать по:</div>
-          <select class="gallery__select" name="">
+          <label class="gallery__label" for="gallery-form-author" aria-label="Выбор автора">Выбор автора</label>
+          <select class="gallery__select" name="" id="gallery-form-author">
             <option value="1">Автор</option>
           </select>
-          <input class="gallery__input" type="text" placeholder="Напрвление">
-          <input class="gallery__input" type="text" placeholder="Техника">
+          <label class="gallery__label" for="gallery-form-direction" aria-label="Выбор направления">Выбор направления</label>
+          <input class="gallery__input" type="text" placeholder="Направление" id="gallery-form-direction">
+          <label class="gallery__label" for="gallery-form-tech" aria-label="Выбор техники исполнения">Выбор техники исполнения</label>
+          <input class="gallery__input" type="text" placeholder="Техника" id="gallery-form-tech">
         </div>
 
         <div class="gallery__info">
