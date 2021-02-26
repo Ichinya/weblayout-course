@@ -61,3 +61,19 @@ const gallery = new Swiper('.swiper-gallery', {
     }
   }
 })
+
+$(function () {
+  $(".catalog__column-right").accordion({
+    active: false,
+    collapsible: true,
+    heightStyle: "content",
+    header: ".accordion__header",
+    icons: {"header": "accordion__header__icon", "activeHeader": "accordion__header__icon"},
+    classes: {
+      "ui-accordion-header": "accordion__header",
+      "ui-accordion-header-collapsed": "accordion__header",
+      "ui-accordion-content": "accordion__body"
+    }
+  });
+});
+
