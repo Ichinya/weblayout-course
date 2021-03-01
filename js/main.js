@@ -64,7 +64,7 @@ const gallery = new Swiper('.swiper-gallery', {
 
 $(function () {
   $(".catalog__column-right").accordion({
-    active: false,
+    // active: true,
     collapsible: true,
     heightStyle: "content",
     header: ".accordion__header",
