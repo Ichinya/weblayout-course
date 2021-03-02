@@ -75,5 +75,32 @@ $(function () {
       "ui-accordion-content": "accordion__body"
     }
   });
+
+  $('.bullet').click(function () {
+    $('.bullet').removeClass('active');
+    $(this).addClass('active');
+    let parent = this.parentElement;
+    let length = parent.children.length;
+    for (let i = 0; i < length; i++) {
+      let el = parent.children[i];
+      if (el.classList.contains('active')) {
+        let cards = document.querySelectorAll('.events__card');
+        for (let c = 0; c < length; c++) {
+          cards[c].classList.remove('is-hidden');
+          cards[c].style.display = 'none';
+        }
+        cards[i].style.display = 'block';
+        break;
+      }
+    }
+  })
+
+  $('.events__button').click(function () {
+    this.classList.add('is-hidden');
+    $('.events__card').removeClass('is-hidden');
+  })
+
 });
+
+
 
