@@ -1,6 +1,11 @@
 const hero = new Swiper('.swiper-hero', {
   // Optional parameters
   loop: true,
+  parallax: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
   autoplay: {
     delay: 3000,
   },
@@ -11,6 +16,8 @@ const hero = new Swiper('.swiper-hero', {
   }
 
 });
+
+new SimpleBar(document.getElementById('dd-scroll'));
 
 
 const gallery = new Swiper('.swiper-gallery', {
@@ -37,7 +44,7 @@ const gallery = new Swiper('.swiper-gallery', {
       slidesPerGroup: 1,
       slidesPerColumn: 1,
     },
-    768: {
+    576: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       slidesPerColumn: 2,
@@ -63,6 +70,12 @@ const gallery = new Swiper('.swiper-gallery', {
 })
 
 $(function () {
+
+  window.addEventListener(`resize`, event => {
+    hero.init();
+    gallery.init();
+  }, false);
+
   $(".catalog__column-right").accordion({
     // active: true,
     collapsible: true,
@@ -100,6 +113,14 @@ $(function () {
     $('.events__card').removeClass('is-hidden');
     let cards = document.querySelectorAll('.events__card');
     cards[2].style.display = 'block';
+  })
+
+  $('.sub__menu__link').click(function (e) {
+    let s = document.getElementById('dd-scroll');
+    let left = e.currentTarget.offsetLeft;
+    console.log(left, e);
+    s.style.left = left + 'px';
+    s.classList.toggle('is-hidden');
   })
 
 });

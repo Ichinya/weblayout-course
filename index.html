@@ -13,6 +13,10 @@
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
 
+  <!--  SimpleBar-->
+  <link rel="stylesheet" href="/css/simplebar.css"/>
+  <script src="/js/simplebar.min.js"></script>
+
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/main.js"></script>
 
@@ -21,111 +25,152 @@
 </head>
 <body>
 <header class="header">
-  <div class="header__menu">
+  <div class="wrapper">
+    <div class="header__menu">
 
-    <div class="burger"></div>
+      <div class="burger"></div>
 
-    <div class="header__menu__logo"><a href="/"><img src="img/logo.svg" alt="Лого"></a></div>
+      <div class="header__menu__logo"><a href="/"><img src="img/logo.svg" alt="Лого"></a></div>
 
-    <nav class="header__menu__nav">
-      <ul class="main__menu">
-        <li class="main__menu__item"><a href="#" class="main__menu__link">О нас</a></li>
-        <li class="main__menu__item"><a href="#" class="main__menu__link">Галерея</a></li>
-        <li class="main__menu__item"><a href="#" class="main__menu__link">Каталог</a></li>
-        <li class="main__menu__item"><a href="#" class="main__menu__link">События</a></li>
-        <li class="main__menu__item"><a href="#" class="main__menu__link">Издания</a></li>
-        <li class="main__menu__item"><a href="#" class="main__menu__link">Проекты</a></li>
-        <li class="main__menu__item"><a href="#" class="main__menu__link">Контакты</a></li>
-      </ul>
-    </nav>
+      <nav class="header__menu__nav">
+        <ul class="main__menu">
+          <li class="main__menu__item"><a href="#" class="main__menu__link">О нас</a></li>
+          <li class="main__menu__item"><a href="#" class="main__menu__link">Галерея</a></li>
+          <li class="main__menu__item"><a href="#" class="main__menu__link">Каталог</a></li>
+          <li class="main__menu__item"><a href="#" class="main__menu__link">События</a></li>
+          <li class="main__menu__item"><a href="#" class="main__menu__link">Издания</a></li>
+          <li class="main__menu__item"><a href="#" class="main__menu__link">Проекты</a></li>
+          <li class="main__menu__item"><a href="#" class="main__menu__link">Контакты</a></li>
+        </ul>
+      </nav>
 
-    <a href class="account__login main__menu__link">
-      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-          fill="white"/>
-      </svg>
-      Войти</a>
+      <a href class="account__login main__menu__link">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+            fill="white"/>
+        </svg>
+        Войти</a>
 
-    <div class="main__header__search">
-      <form action="#" method="get" id="search">
-        <button class="btn-none">
-          <label for="main-search-input" aria-label="Поиск">
-            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="6.8678" height="1.71695"
-                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-                    fill="white"/>
-            </svg>
-          </label>
-        </button>
-        <label for="search-input" style="display: none" aria-label="Поиск"></label>
-        <input type="text" id="search-input" placeholder="Поиск по сайту">
-      </form>
+      <div class="main__header__search">
+        <form action="#" method="get" id="search">
+          <button class="btn-none">
+            <label for="main-search-input" aria-label="Поиск">
+              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695"
+                      transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                      fill="white"/>
+              </svg>
+            </label>
+          </button>
+          <label for="search-input" style="display: none" aria-label="Поиск"></label>
+          <input type="text" id="search-input" placeholder="Поиск по сайту">
+        </form>
+      </div>
+
     </div>
 
+    <div class="header__sub">
+      <ul class="header__sub__menu">
+        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Реализм</a></li>
+        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Импрессионизм</a></li>
+        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Постимпрессионизм</a></li>
+        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Авангард</a></li>
+        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Футуризм</a></li>
+      </ul>
+
+      <div class="header__search">
+        <form action="#" method="get" id="main-search">
+          <button class="btn-none">
+            <label for="main-search-input" aria-label="Поиск">
+              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695"
+                      transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                      fill="white"/>
+              </svg>
+            </label>
+          </button>
+          <input type="text" id="main-search-input" placeholder="Поиск по сайту">
+        </form>
+      </div>
+
+    </div>
   </div>
 
-  <div class="header__sub">
-    <ul class="header__sub__menu">
-      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Реализм</a></li>
-      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Импрессионизм</a></li>
-      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Постимпрессионизм</a></li>
-      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Авангард</a></li>
-      <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Футуризм</a></li>
+  <div class="dropdown is-hidden" id="dd-scroll" data-simplebar>
+    <ul class="dropdown__menu">
+      <li class="dropdown__menu__item">
+        <img class="dropdown__menu__img" src="/img/dd/1.png" alt="картинка">
+        <p class="dropdown__menu__text">Тинтеретто</p>
+      </li>
+      <li class="dropdown__menu__item">
+        <img class="dropdown__menu__img" src="/img/dd/2.png" alt="картинка">
+        <p class="dropdown__menu__text">Фридрих</p>
+      </li>
+      <li class="dropdown__menu__item">
+        <img class="dropdown__menu__img" src="/img/dd/3.png" alt="картинка">
+        <p class="dropdown__menu__text">Леонардо</p>
+      </li>
+      <li class="dropdown__menu__item">
+        <img class="dropdown__menu__img" src="/img/dd/4.png" alt="картинка">
+        <p class="dropdown__menu__text">Верроккью</p>
+      </li>
     </ul>
 
-    <div class="header__search">
-      <form action="#" method="get" id="main-search">
-        <button class="btn-none">
-          <label for="main-search-input" aria-label="Поиск">
-            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="6.8678" height="1.71695"
-                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-                    fill="white"/>
-            </svg>
-          </label>
-        </button>
-        <input type="text" id="main-search-input" placeholder="Поиск по сайту">
-      </form>
-    </div>
-
   </div>
+  <noscript>
+    <style>
+      [data-simplebar] {
+        overflow: auto;
+      }
+    </style>
+  </noscript>
 
 </header>
 
 <main>
   <section class="section hero">
+    <div class="wrapper">
 
-    <h2 class="hero__title">Прикоснитесь к прекрасному</h2>
-    <div
-      class="hero__desc">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
-    </div>
+      <!-- Slider main container -->
+      <div class="swiper-hero swiper-container">
+        <!-- Additional required wrapper -->
 
-    <button class="btn btn-hero">Подписаться на рассылку</button>
+        <h2 class="hero__title" data-swiper-parallax-opacity="1" data-swiper-parallax-scale="1" data-swiper-parallax="0"
+            data-swiper-parallax-duration="500">Прикоснитесь к прекрасному</h2>
+        <div
+          class="hero__desc">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+        </div>
 
-    <!-- Slider main container -->
-    <div class="swiper-hero swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide"><img src="img/birmingham1.png" alt="Слайд 1"></div>
-        <div class="swiper-slide"><img src="img/birmingham2.jpg" alt="Слайд 2"></div>
-        <div class="swiper-slide"><img src="img/birmingham3.png" alt="Слайд 3"></div>
+        <button class="btn btn-hero">Подписаться на рассылку</button>
+
+
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="img/birmingham1.png" alt="Слайд 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/birmingham2.jpg" alt="Слайд 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/birmingham3.png" alt="Слайд 3">
+          </div>
+        </div>
+
       </div>
-
     </div>
-
   </section>
 
   <section class="section about">
     <div class="wrapper">
       <h2 class="title">О нас</h2>
-      <p
-        class="about__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+      <p class="about__text">
+        Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
     </div>
   </section>
 
@@ -141,12 +186,15 @@
           <select class="gallery__select" name="" id="gallery-form-author">
             <option value="1">Автор</option>
           </select>
-          <label class="gallery__label" for="gallery-form-direction"
-                 aria-label="Выбор направления">Выбор направления</label>
-          <input class="gallery__input" type="text" placeholder="Направление" id="gallery-form-direction">
+          <label class="gallery__label" for="gallery-form-direction" aria-label="Выбор автора">Выбор направления</label>
+          <select class="gallery__select is-hidden" name="" id="gallery-form-direction">
+            <option value="1">Выбор направления</option>
+          </select>
           <label class="gallery__label" for="gallery-form-tech"
-                 aria-label="Выбор техники исполнения">Выбор техники исполнения</label>
-          <input class="gallery__input" type="text" placeholder="Техника" id="gallery-form-tech">
+                 aria-label="Выбор автора">Выбор техники исполнения</label>
+          <select class="gallery__select is-hidden" name="" id="gallery-form-tech">
+            <option value="1">Выбор техники исполнения</option>
+          </select>
         </div>
 
         <div class="gallery__info">
@@ -573,7 +621,6 @@
   </section>
 
 </main>
-
 
 </body>
 </html>
