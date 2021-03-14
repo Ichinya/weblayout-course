@@ -1055,6 +1055,75 @@ nav.header__menu__nav {
   margin-top: 15px;
 }
 
+/* проекты */
+.icon__info {
+  display: inline-block;
+  background: transparent url(/img/icons/i.svg) no-repeat center / cover;
+  width: 16px;
+  height: 16px;
+  border: none !important;
+  margin: 0;
+  padding: 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  top: 2px;
+  right: 1px;
+}
+
+.icon__info:hover,
+.icon__info:active,
+.icon__info:focus {
+  background-image: url(/img/icons/i_fill.svg);
+}
+
+.project__text {
+  max-width: 1055px;
+}
+
+.link {
+  font-weight: 600;
+}
+
+.projects {
+  position: relative;
+}
+
+.project-arrow-left {
+  position: absolute;
+  left: 0;
+  transform: rotate(180deg);
+  top: 60px;
+}
+
+.project-arrow-right {
+  position: absolute;
+  top: 60px;
+  right: 0;
+}
+
+.swiper-project {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+h3.title {
+  font-weight: 600;
+  margin-top: 14px;
+  margin-bottom: 26px;
+  padding-top: 0;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.project-slide img {
+  width: 100%;
+  filter: grayscale(1);
+  object-fit: fill;
+  min-height: 106px;
+}
+
+.project {
+  margin-top: 74px;
+}
 
 @media (min-width: 320px) and (max-width: 1919px) {
   .header__sub {
@@ -1333,6 +1402,18 @@ nav.header__menu__nav {
     padding-bottom: 58px;
   }
 
+  .swiper-project {
+    margin-left: 53px;
+    margin-right: 53px;
+  }
+
+  .project-arrow-left {
+    top: 50px;
+  }
+
+  .project-arrow-right {
+    top: 50px;
+  }
 
 }
 
@@ -1561,6 +1642,24 @@ nav.header__menu__nav {
 
   .btn-magazine {
     margin-top: 17px;
+  }
+
+  .project__text {
+    max-width: 660px;
+  }
+
+  h3.title {
+    margin-left: -2px;
+    margin-top: 18px;
+    margin-bottom: 33px;
+  }
+
+  .project-arrow-left {
+    top: 39px;
+  }
+
+  .project-arrow-right {
+    top: 39px;
   }
 
 }
@@ -2077,8 +2176,38 @@ nav.header__menu__nav {
   }
 
   .magazines {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
+  .project {
+    margin-top: 44px;
+
+  }
+
+  .project .title {
+    margin-bottom: 10px;
+  }
+
+  .project__text {
+    margin-left: 7px;
+    margin-top: 0;
+    max-width: 291px;
+  }
+
+  h3.title {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-left: 7px;
+    margin-bottom: -3px !important;
+  }
+
+  .project-arrow-left {
+    top: 38px;
+    left: 8px;
+  }
+  .project-arrow-right {
+    top: 38px;
+    right: 8px;
+  }
 
 }

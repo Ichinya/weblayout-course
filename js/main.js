@@ -70,6 +70,8 @@ const gallery = new Swiper('.swiper-gallery', {
 
 const magazines__gallery = new Swiper('.swiper-magazines', {
   slidesPerView: 3,
+  slidesPerGroup: 3,
+  slidesPerColumnFill: 'row',
 
   navigation: {
     nextEl: '.magazines-swiper-arrow-right',
@@ -86,6 +88,33 @@ const magazines__gallery = new Swiper('.swiper-magazines', {
   breakpoints: {
     320: {
       slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50
+    },
+    1920: {
+      slidesPerView: 3,
+      spaceBetween: 50
+    }
+  }
+})
+
+const projects__gallery = new Swiper('.swiper-project', {
+  slidesPerView: 3,
+
+  navigation: {
+    nextEl: '.project-arrow-right',
+    prevEl: '.project-arrow-left',
+  },
+  watchOverflow: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1
     },
     768: {
       slidesPerView: 2,
@@ -130,8 +159,11 @@ $(function () {
     hero.init();
     gallery.init();
     magazines__gallery.init();
+    projects__gallery.init();
 
-    document.querySelectorAll('.magazines__list-select li').forEach(function(el){el.remove();})
+    document.querySelectorAll('.magazines__list-select li').forEach(function (el) {
+      el.remove();
+    })
   }, false);
 
   $(".catalog__column-right").accordion({
