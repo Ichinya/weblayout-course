@@ -19,7 +19,6 @@ const hero = new Swiper('.swiper-hero', {
 
 new SimpleBar(document.getElementById('dd-scroll'));
 
-
 const gallery = new Swiper('.swiper-gallery', {
   slidesPerView: 1,
   slidesPerGroup: 1,
@@ -39,7 +38,7 @@ const gallery = new Swiper('.swiper-gallery', {
   },
   watchOverflow: true,
   breakpoints: {
-    320: {
+    1: {
       slidesPerView: 1,
       slidesPerGroup: 1,
       slidesPerColumn: 1,
@@ -69,11 +68,70 @@ const gallery = new Swiper('.swiper-gallery', {
   }
 })
 
+const magazines__gallery = new Swiper('.swiper-magazines', {
+  slidesPerView: 3,
+
+  navigation: {
+    nextEl: '.magazines-swiper-arrow-right',
+    prevEl: '.magazines-swiper-arrow-left',
+  },
+  pagination: {
+    el: '.magazines__gallery-pagination',
+    type: 'fraction',
+    renderFraction: function (currentClass, totalClass) {
+      return '<span class="' + currentClass + '"></span> / <span class="' + totalClass + '"></span>';
+    }
+  },
+  watchOverflow: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50
+    },
+    1920: {
+      slidesPerView: 3,
+      spaceBetween: 50
+    }
+  }
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.icon-flags').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      let path = e.currentTarget.dataset.path;
+      console.log(path);
+
+      // меняем на табе
+      document.querySelectorAll('.icon-flags').forEach(function (link) {
+        link.classList.remove('flag-active');
+      })
+      e.currentTarget.classList.add('flag-active');
+
+      // показываем таб
+      document.querySelectorAll('.catalog__text').forEach(function (link) {
+        link.classList.remove('active');
+      })
+
+      document.querySelector(`[data-target="${path}"]`).classList.add('active');
+    })
+  })
+})
+
 $(function () {
 
   window.addEventListener(`resize`, event => {
     hero.init();
     gallery.init();
+    magazines__gallery.init();
+
+    document.querySelectorAll('.magazines__list-select li').forEach(function(el){el.remove();})
   }, false);
 
   $(".catalog__column-right").accordion({
@@ -122,6 +180,63 @@ $(function () {
     s.style.left = left + 'px';
     s.classList.toggle('is-hidden');
   })
+
+  $('.checkbox__item').click(function (e) {
+    if ($(this).prop('checked')) {
+      this.closest('label').style.color = "#C283F3";
+    } else {
+      this.closest('label').style.color = "#FFFFFF";
+    }
+  })
+
+  $('.magazines__category-header').click(function (e) {
+    if (window.screen.width >= 768) {
+      return;
+    }
+    document.querySelector('.magazines__list').classList.toggle('modal');
+    document.querySelector('.magazines__list-select').classList.toggle('is-hidden');
+    document.querySelector('.magazines__category-header').classList.toggle('rotate');
+  })
+
+  $('.magazines__list li').click(function (e) {
+    if (window.screen.width >= 768) {
+      return;
+    }
+    let el = this.cloneNode(true);
+    if (!el.children[0].children[0].checked) {
+      return;
+    }
+    if (typeof this.dataset.list == "undefined") {
+      el.addEventListener('click', function () {
+        let list = document.querySelectorAll('.magazines__list li');
+        for (let i = 0; i < list.length; i++) {
+          if (list[i].dataset.list == this.innerText) {
+            list[i].children[0].children[0].click();
+          }
+        }
+        this.remove();
+      })
+      document.querySelector('.magazines__list-select').appendChild(el);
+      this.dataset.list = this.children[0].innerText;
+    } else {
+      let list = document.querySelectorAll('.magazines__list-select li');
+      for (let i = 0; i < list.length; i++) {
+        if (list[i].innerText == this.dataset.list) {
+          list[i].remove();
+        }
+      }
+    }
+    $('.magazines__category-header').click();
+    return;
+  })
+
+
+  document.body.querySelector('#gallery-form-author').addEventListener('change', event => {
+
+    $('.gallery__select').removeClass('is-hidden');
+    $('.gallery__select')[1].style.visibility = 'visible';
+    $('.gallery__select')[2].style.visibility = 'visible';
+  }, false);
 
 });
 

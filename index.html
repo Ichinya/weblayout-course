@@ -18,6 +18,7 @@
   <script src="/js/simplebar.min.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonts.css">
   <script defer src="js/main.js"></script>
 
 
@@ -119,6 +120,22 @@
         <img class="dropdown__menu__img" src="/img/dd/4.png" alt="картинка">
         <p class="dropdown__menu__text">Верроккью</p>
       </li>
+      <li class="dropdown__menu__item">
+        <img class="dropdown__menu__img" src="/img/dd/1.png" alt="картинка">
+        <p class="dropdown__menu__text">Тинтеретто</p>
+      </li>
+      <li class="dropdown__menu__item">
+        <img class="dropdown__menu__img" src="/img/dd/2.png" alt="картинка">
+        <p class="dropdown__menu__text">Фридрих</p>
+      </li>
+      <li class="dropdown__menu__item">
+        <img class="dropdown__menu__img" src="/img/dd/3.png" alt="картинка">
+        <p class="dropdown__menu__text">Леонардо</p>
+      </li>
+      <li class="dropdown__menu__item">
+        <img class="dropdown__menu__img" src="/img/dd/4.png" alt="картинка">
+        <p class="dropdown__menu__text">Верроккью</p>
+      </li>
     </ul>
 
   </div>
@@ -184,16 +201,28 @@
           <div class="gallery__filter__desc">Фильтровать по:</div>
           <label class="gallery__label" for="gallery-form-author" aria-label="Выбор автора">Выбор автора</label>
           <select class="gallery__select" name="" id="gallery-form-author">
-            <option value="1">Автор</option>
+            <option value="none" hidden="">Автор</option>
+            <option value="1">Автор 1</option>
+            <option value="2">Автор 2</option>
+            <option value="3">Автор 3</option>
+            <option value="4">Автор 4</option>
           </select>
           <label class="gallery__label" for="gallery-form-direction" aria-label="Выбор автора">Выбор направления</label>
-          <select class="gallery__select is-hidden" name="" id="gallery-form-direction">
-            <option value="1">Выбор направления</option>
+          <select class="gallery__select" name="" id="gallery-form-direction" style="visibility: hidden;">
+            <option value="none" hidden>Выбор направления</option>
+            <option value="1">направление 1</option>
+            <option value="2">направление 2</option>
+            <option value="3">направление 3</option>
+            <option value="4">направление 4</option>
           </select>
           <label class="gallery__label" for="gallery-form-tech"
                  aria-label="Выбор автора">Выбор техники исполнения</label>
-          <select class="gallery__select is-hidden" name="" id="gallery-form-tech">
-            <option value="1">Выбор техники исполнения</option>
+          <select class="gallery__select" name="" id="gallery-form-tech" style="visibility: hidden;">
+            <option value="0" hidden>Выбор техники исполнения</option>
+            <option value="1">исполнения 1</option>
+            <option value="2">исполнения 2</option>
+            <option value="3">исполнения 3</option>
+            <option value="4">исполнения 4</option>
           </select>
         </div>
 
@@ -213,36 +242,36 @@
 
         <div class="swiper-gallery swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/gallery/gallery_01.png" alt="картина 1"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_02.png" alt="картина 2"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_03.png" alt="картина 3"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_04.png" alt="картина 4"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_05.png" alt="картина 5"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_06.png" alt="картина 6"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_07.png" alt="картина 7"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_08.png" alt="картина 8"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_09.png" alt="картина 9"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_10.png" alt="картина 10"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_11.png" alt="картина 11"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_12.png" alt="картина 12"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_13.png" alt="картина 13"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_14.png" alt="картина 14"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_15.png" alt="картина 15"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_16.png" alt="картина 16"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_17.png" alt="картина 17"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_18.png" alt="картина 18"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_19.png" alt="картина 19"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_20.png" alt="картина 20"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_21.png" alt="картина 21"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_22.png" alt="картина 22"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_23.png" alt="картина 23"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_24.png" alt="картина 24"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_25.png" alt="картина 25"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_26.png" alt="картина 26"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_27.png" alt="картина 27"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_28.png" alt="картина 28"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_29.png" alt="картина 29"></div>
-            <div class="swiper-slide"><img src="img/gallery/gallery_30.png" alt="картина 30"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_01.png" alt="картина 1"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_02.png" alt="картина 2"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_03.png" alt="картина 3"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_04.png" alt="картина 4"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_05.png" alt="картина 5"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_06.png" alt="картина 6"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_07.png" alt="картина 7"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_08.png" alt="картина 8"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_09.png" alt="картина 9"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_10.png" alt="картина 10"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_11.png" alt="картина 11"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_12.png" alt="картина 12"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_13.png" alt="картина 13"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_14.png" alt="картина 14"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_15.png" alt="картина 15"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_16.png" alt="картина 16"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_17.png" alt="картина 17"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_18.png" alt="картина 18"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_19.png" alt="картина 19"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_20.png" alt="картина 20"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_21.png" alt="картина 21"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_22.png" alt="картина 22"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_23.png" alt="картина 23"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_24.png" alt="картина 24"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_25.png" alt="картина 25"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_26.png" alt="картина 26"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_27.png" alt="картина 27"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_28.png" alt="картина 28"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_29.png" alt="картина 29"></div>
+            <div class="swiper-slide gallery-slide"><img src="img/gallery/gallery_30.png" alt="картина 30"></div>
           </div>
 
         </div>
@@ -254,14 +283,23 @@
     <div class="wrapper">
       <div class="catalog__header">
         <h2 class="title">Каталог</h2>
-        <div class="icon-flags flag-4"></div>
-        <div class="icon-flags flag-6 flag-active"></div>
-        <div class="icon-flags flag-7"></div>
-        <div class="icon-flags flag-8"></div>
-        <div class="icon-flags flag-5"></div>
+        <div class="icon-flags flag-4" data-path="f4"></div>
+        <div class="icon-flags flag-6 flag-active" data-path="f6"></div>
+        <div class="icon-flags flag-7" data-path="f7"></div>
+        <div class="icon-flags flag-8" data-path="f8"></div>
+        <div class="icon-flags flag-5" data-path="f5"></div>
       </div>
-      <p
-        class="catalog__text">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. </p>
+
+      <p class="catalog__text" data-target="f4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis dolor doloribus esse minus perferendis recusandae rem sed! Autem blanditiis eveniet facilis labore molestiae nostrum perspiciatis quis quos? Ab, laboriosam! </p>
+      <p class="catalog__text active" data-target="f6">
+        Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. </p>
+      <p class="catalog__text" data-target="f7">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto aut delectus dolorem dolores eos explicabo magni minima modi molestiae molestias necessitatibus officia quia quidem quo quos, rem repellendus temporibus. </p>
+      <p class="catalog__text" data-target="f8">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi aperiam beatae commodi cum, dignissimos, harum, ipsa iure labore magni maiores maxime minima nostrum nulla officiis placeat quas quo voluptatem. </p>
+      <p class="catalog__text" data-target="f5">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at autem consequatur eligendi enim natus necessitatibus officia provident quo repellendus sequi, voluptatibus! Aut autem dignissimos dolorem odit quibusdam suscipit, veniam?</p>
       <div class="catalog__columns">
 
         <div class="catalog__column-left">
@@ -512,7 +550,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section events">
     <div class="wrapper">
       <div class="title title-events">События</div>
 
@@ -618,6 +656,252 @@
 
       </div> <!-- events__cards -->
     </div> <!-- wrapper -->
+  </section>
+
+  <section class="section magazines">
+    <div class="wrapper">
+      <div class="columns">
+        <div class="magazines__column-left">
+          <h2 class="title">Издания</h2>
+          <div class="magazines__category-header">Категории</div>
+          <ul class="magazines__list">
+            <li>
+              <label class="checkbox__label" for="check1">
+                <input class="checkbox__item" type="checkbox" id="check1">Бестселлеры
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check2">
+                <input class="checkbox__item" type="checkbox" id="check2">Искусство
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check3">
+                <input class="checkbox__item" type="checkbox" id="check3">Архитектура
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check4">
+                <input class="checkbox__item" type="checkbox" id="check4">Дизайн
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check5">
+                <input class="checkbox__item" type="checkbox" id="check5">Мода
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check6">
+                <input class="checkbox__item" type="checkbox" id="check6">Детям
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check8">
+                <input class="checkbox__item" type="checkbox" id="check8">Художественная литература
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check9">
+                <input class="checkbox__item" type="checkbox" id="check9">Публицистика
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check10">
+                <input class="checkbox__item" type="checkbox" id="check10">Путеводители
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check11">
+                <input class="checkbox__item" type="checkbox" id="check11">Философия
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check12">
+                <input class="checkbox__item" type="checkbox" id="check12">Учебная литература
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="checkbox__label" for="check13">
+                <input class="checkbox__item" type="checkbox" id="check13">Журналы и газеты
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="11" height="11" stroke="white"/>
+                  </svg>
+                </span>
+              </label>
+            </li>
+          </ul>
+          <ul class="magazines__list-select"></ul>
+          <div class="magazines__filter">
+            <div class="label">Цена</div>
+            <div class="magazines__filter-border">
+              <label class="magazine__from" for="magazine__from">От</label>
+              <input class="magazines__filter-input" type="text" id="magazine__from" value="50">
+              <label for="magazine__from" class="magazine__to">до</label>
+              <input class="magazines__filter-input" type="text" id="magazine__to" value="25 000">
+              <span class="magazine__filter-rub">руб.</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="magazines__column-right">
+
+          <div class="magazines__gallery">
+            <!-- Add Arrows -->
+            <div class="swiper-arrow magazines-swiper-arrow-left"></div>
+            <div class="swiper-arrow magazines-swiper-arrow-right"></div>
+            <!-- Add Pagination -->
+            <div class="magazines__gallery-pagination"></div>
+
+            <div class="swiper-magazines swiper-container">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide magazine__slide">
+                  <img src="img/magazines/m1.jpg" alt="журнал 1">
+                  <div class="magazine__info">
+                    <div class="magazine__info-name">
+                      <div class="magazine__info-body">Искусство цвета</div>
+                      <div class="magazine__info-author">Иттен, Иоханнес</div>
+                    </div>
+                    <div class="magazine__info-price">620 руб</div>
+                  </div>
+                  <button class="btn btn-magazine">Заказать</button>
+                </div>
+
+                <div class="swiper-slide magazine__slide">
+                  <img src="img/magazines/m2.png" alt="журнал 2">
+                  <div class="magazine__info">
+                    <div class="magazine__info-name">
+                      <div class="magazine__info-body">Типографика</div>
+                      <div class="magazine__info-author">Рудер, Эмиль</div>
+                    </div>
+                    <div class="magazine__info-price">2 450 руб</div>
+                  </div>
+                  <button class="btn btn-magazine">Заказать</button>
+                </div>
+
+                <div class="swiper-slide magazine__slide">
+                  <img src="img/magazines/m3.jpg" alt="журнал 3">
+                  <div class="magazine__info">
+                    <div class="magazine__info-name">
+                      <div class="magazine__info-body">Книга про буквы</div>
+                      <div class="magazine__info-author">Гордон, Юрий</div>
+                    </div>
+                    <div class="magazine__info-price">2 200 руб</div>
+                  </div>
+                  <button class="btn btn-magazine">Заказать</button>
+                </div>
+
+                <div class="swiper-slide magazine__slide">
+                  <img src="img/magazines/m4.png" alt="журнал 4">
+                  <div class="magazine__info">
+                    <div class="magazine__info-name">
+                      <div class="magazine__info-body">Николай Ильин</div>
+                      <div class="magazine__info-author">Кричевский, Владимир</div>
+                    </div>
+                    <div class="magazine__info-price">1 100 руб</div>
+                  </div>
+                  <button class="btn btn-magazine">Заказать</button>
+                </div>
+                <div class="swiper-slide magazine__slide">
+                  <img src="img/magazines/m5.jpg" alt="журнал 5">
+                  <div class="magazine__info">
+                    <div class="magazine__info-name">
+                      <div class="magazine__info-body">Модульные сетки в граф...</div>
+                      <div class="magazine__info-author">Мюллер-Брокманн, Йозеф</div>
+                    </div>
+                    <div class="magazine__info-price">1 450 руб</div>
+                  </div>
+                  <button class="btn btn-magazine">Заказать</button>
+                </div>
+
+                <div class="swiper-slide magazine__slide">
+                  <img src="img/magazines/m6.png" alt="журнал 6">
+                  <div class="magazine__info">
+                    <div class="magazine__info-name">
+                      <div class="magazine__info-body">Эволюция графических ст...</div>
+                      <div class="magazine__info-author">Хеллер, Чваст</div>
+                    </div>
+                    <div class="magazine__info-price">3 200 руб</div>
+                  </div>
+                  <button class="btn btn-magazine">Заказать</button>
+                </div>
+
+                <div class="swiper-slide magazine__slide">
+                  <img src="img/magazines/m7.png" alt="журнал 7">
+                  <div class="magazine__info">
+                    <div class="magazine__info-name">
+                      <div class="magazine__info-body">Искусство и визуальное в...</div>
+                      <div class="magazine__info-author">Арнхейм, Рудольф</div>
+                    </div>
+                    <div class="magazine__info-price">2 200 руб</div>
+                  </div>
+                  <button class="btn btn-magazine">Заказать</button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- wrapper -->
   </section>
 
 </main>
