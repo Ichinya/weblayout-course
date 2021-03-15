@@ -153,6 +153,10 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
+function close_modal() {
+  modal_gallery.classList.remove('is-active');
+}
+
 $(function () {
 
   window.addEventListener(`resize`, event => {
@@ -165,6 +169,26 @@ $(function () {
       el.remove();
     })
   }, false);
+
+  let map = ymaps.ready(init);
+
+  function init() {
+    let myMap = new ymaps.Map(document.getElementById("YMapsID"), {
+        center: [55.759927, 37.644897],
+        zoom: 13,
+        controls: []
+      }),
+
+      myPoint = new ymaps.Placemark([55.758463, 37.601079], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/target_maps.svg',
+        iconImageSize: [20, 20],
+        iconImageOffset: [-10, -10]
+      });
+
+    myMap.geoObjects.add(myPoint);
+
+  }
 
   $(".catalog__column-right").accordion({
     // active: true,
@@ -230,6 +254,25 @@ $(function () {
     document.querySelector('.magazines__category-header').classList.toggle('rotate');
   })
 
+  $('.gallery-slide').click(function () {
+    modal_gallery.classList.add('is-active');
+    $('#modal_gallery').find('.modal-content')[0].innerHTML = '';
+    let el = this.cloneNode(true);
+    $('#modal_gallery').find('.modal-content')[0].appendChild(el.childNodes[0]);
+  })
+
+  $('.modal-background').click(function () {
+    close_modal();
+  })
+
+  $('.modal-content').click(function () {
+    close_modal();
+  })
+
+  $('.modal-close').click(function () {
+    close_modal();
+  })
+
   $('.magazines__list li').click(function (e) {
     if (window.screen.width >= 768) {
       return;
@@ -270,6 +313,12 @@ $(function () {
     $('.gallery__select')[2].style.visibility = 'visible';
   }, false);
 
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.code == 'Escape') {
+    close_modal();
+  }
 });
 
 

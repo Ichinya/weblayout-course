@@ -18,6 +18,11 @@
   <script src="/js/simplebar.min.js"></script>
 
   <link rel="stylesheet" href="/css/bulma-tooltip.min.css">
+  <link rel="stylesheet" href="/css/modal.css">
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=4692d9a9-befd-4c01-89c3-7b8adcedfad5&lang=ru_RU"
+          type="text/javascript">
+  </script>
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
@@ -194,6 +199,15 @@
   </section>
 
   <section class="section section-gallery">
+
+    <div class="modal" id="modal_gallery">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <!-- Any other Bulma elements you want -->
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
 
     <div class="wrapper flex">
 
@@ -952,7 +966,44 @@
     </div>
   </section>
 
+  <section class="section contact">
+    <h2 class="title">Контакты</h2>
+    <div class="columns">
+      <div class="contacts__column__left">
+        <div class="address__name">Шоурум №4</div>
+        <address>Леонтьевский переулок, дом 5, строение 1</address>
+        <div class="address__desc">Заказать обратный звонок</div>
+        <form action="#" method="post">
+          <label class="gallery__label" for="contact__form__name">Имя</label>
+          <input class="contact__form-input" type="text" id="contact__form__name" placeholder="Имя *" required>
+          <label class="gallery__label" for="contact__form__phone">Телефон</label>
+          <input class="contact__form-input" type="text" id="contact__form__phone" placeholder="Телефон *" required>
+          <submit class="btn btn-contact">Заказать</submit>
+        </form>
+        <div class="address__desc bottom">Связаться в один клик</div>
+        <div class="contact__icon icon__wa"></div>
+        <div class="contact__icon icon__telegram"></div>
+      </div>
+
+      <div class="contacts__column__right">
+
+        <div id="YMapsID"></div>
+      </div>
+    </div>
+  </section>
+
 </main>
+
+<footer>
+  <div class="footer__logo">
+    <a href="/"><img src="img/logo.svg" alt="Лого"></a>
+  </div>
+  <div class="social__icons">
+    <div class="footer__icon icon__vk"></div>
+    <div class="footer__icon icon__instagram"></div>
+    <div class="footer__icon icon__facebook"></div>
+  </div>
+</footer>
 
 </body>
 </html>
