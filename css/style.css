@@ -538,7 +538,7 @@ nav.header__menu__nav {
 
 .gallery-slide.swiper-slide:hover:before {
   content: ' ';
-  background: rgba(0, 0, 0, .4) url(/img/icons/plus.svg) no-repeat center;
+  background: rgba(0, 0, 0, .4) url(../img/icons/plus.svg) no-repeat center;
   width: calc(100% - 50px);
   height: calc(100% - 55px);
   margin: 25px;
@@ -854,7 +854,7 @@ nav.header__menu__nav {
 
 /* magazines */
 .magazines {
-  background: #333333 url(/img/birmingham4.jpg) no-repeat center / cover;
+  background: #333333 url(../img/birmingham4.jpg) no-repeat center / cover;
   color: #FFFFFF;
 }
 
@@ -1058,7 +1058,7 @@ nav.header__menu__nav {
 /* проекты */
 .icon__info {
   display: inline-block;
-  background: transparent url(/img/icons/i.svg) no-repeat center / cover;
+  background: transparent url(../img/icons/i.svg) no-repeat center / cover;
   width: 16px;
   height: 16px;
   border: none !important;
@@ -1072,7 +1072,7 @@ nav.header__menu__nav {
 .icon__info:hover,
 .icon__info:active,
 .icon__info:focus {
-  background-image: url(/img/icons/i_fill.svg);
+  background-image: url(../img/icons/i_fill.svg);
 }
 
 .project__text {
@@ -1193,11 +1193,11 @@ address {
 }
 
 .icon__wa {
-  background-image: url(/img/icons/whatsapp.svg);
+  background-image: url(../img/icons/whatsapp.svg);
 }
 
 .icon__telegram {
-  background-image: url(/img/icons/telegram.svg);
+  background-image: url(../img/icons/telegram.svg);
 }
 
 .address__desc {
@@ -1247,15 +1247,15 @@ footer {
 }
 
 .icon__vk {
-  background-image: url(/img/icons/vk.svg);
+  background-image: url(../img/icons/vk.svg);
 }
 
 .icon__instagram {
-  background-image: url(/img/icons/instagram.svg);
+  background-image: url(../img/icons/instagram.svg);
 }
 
 .icon__facebook {
-  background-image: url(/img/icons/fb.svg);
+  background-image: url(../img/icons/fb.svg);
 }
 
 @media (min-width: 320px) and (max-width: 1919px) {
