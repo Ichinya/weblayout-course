@@ -157,38 +157,56 @@ function close_modal() {
   modal_gallery.classList.remove('is-active');
 }
 
+let myMap;
+
+function init() {
+  myMap = new ymaps.Map(document.getElementById("YMapsID"), {
+      center: [55.759927, 37.644897],
+      zoom: 13,
+      // autoFitToViewport: 'always',
+      controls: []
+    }),
+
+    myPoint = new ymaps.Placemark([55.758463, 37.601079], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/target_maps.svg',
+      iconImageSize: [20, 20],
+      iconImageOffset: [-10, -10]
+    });
+
+  myMap.geoObjects.add(myPoint);
+
+}
+
+let yandexmap = ymaps.ready(init);
+
 $(function () {
 
-  window.addEventListener(`resize`, event => {
+
+  window.addEventListener(`resize`, () => {
+    console.log('resize');
     hero.init();
     gallery.init();
     magazines__gallery.init();
     projects__gallery.init();
+
+    // данный способ иногда дублирует создание карты, из-за чего js вешается
+    // myMap.container.destroy();
+    // yandexmap = ymaps.ready(init);
+
+    // перестраиваем карту, если убрать задержку, то карта криво встает
+    YMapsID.style.display = 'none';
+    setTimeout(function(){
+      YMapsID.style.display = 'block';
+      myMap.container.fitToViewport([true]);
+    }, 10);
+
 
     document.querySelectorAll('.magazines__list-select li').forEach(function (el) {
       el.remove();
     })
   }, false);
 
-  let map = ymaps.ready(init);
-
-  function init() {
-    let myMap = new ymaps.Map(document.getElementById("YMapsID"), {
-        center: [55.759927, 37.644897],
-        zoom: 13,
-        controls: []
-      }),
-
-      myPoint = new ymaps.Placemark([55.758463, 37.601079], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/target_maps.svg',
-        iconImageSize: [20, 20],
-        iconImageOffset: [-10, -10]
-      });
-
-    myMap.geoObjects.add(myPoint);
-
-  }
 
   $(".catalog__column-right").accordion({
     // active: true,
