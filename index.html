@@ -17,6 +17,10 @@
   <link rel="stylesheet" href="css/simplebar.css"/>
   <script src="js/simplebar.min.js"></script>
 
+  <!--  Just Validate валидация-->
+  <link rel="stylesheet" href="css/justValidateTooltip.min.css">
+  <script src="js/just-validate.min.js"></script>
+
   <link rel="stylesheet" href="css/bulma-tooltip.min.css">
   <link rel="stylesheet" href="css/modal.css">
 
@@ -33,66 +37,72 @@
 </head>
 <body>
 <header class="header">
-  <div class="wrapper">
-    <div class="header__menu">
 
-      <div class="burger"></div>
+  <div class="header__menu_bg">
+    <div class="wrapper">
+      <div class="header__menu">
+        <div class="burger"></div>
 
-      <div class="header__menu__logo"><a href="/"><img src="img/logo.svg" alt="Лого"></a></div>
+        <div class="header__menu__logo"><a href="/"><img src="img/logo.svg" alt="Лого"></a></div>
 
-      <nav class="header__menu__nav">
-        <ul class="main__menu">
-          <li class="main__menu__item"><a href="#" class="main__menu__link">О нас</a></li>
-          <li class="main__menu__item"><a href="#" class="main__menu__link">Галерея</a></li>
-          <li class="main__menu__item"><a href="#" class="main__menu__link">Каталог</a></li>
-          <li class="main__menu__item"><a href="#" class="main__menu__link">События</a></li>
-          <li class="main__menu__item"><a href="#" class="main__menu__link">Издания</a></li>
-          <li class="main__menu__item"><a href="#" class="main__menu__link">Проекты</a></li>
-          <li class="main__menu__item"><a href="#" class="main__menu__link">Контакты</a></li>
-        </ul>
-      </nav>
+        <nav class="header__menu__nav">
+          <ul class="main__menu">
+            <li class="main__menu__item"><a href="#" class="main__menu__link">О нас</a></li>
+            <li class="main__menu__item"><a href="#" class="main__menu__link">Галерея</a></li>
+            <li class="main__menu__item"><a href="#" class="main__menu__link">Каталог</a></li>
+            <li class="main__menu__item"><a href="#" class="main__menu__link">События</a></li>
+            <li class="main__menu__item"><a href="#" class="main__menu__link">Издания</a></li>
+            <li class="main__menu__item"><a href="#" class="main__menu__link">Проекты</a></li>
+            <li class="main__menu__item"><a href="#" class="main__menu__link">Контакты</a></li>
+          </ul>
+        </nav>
 
-      <a href class="account__login main__menu__link">
-        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-            fill="white"/>
-        </svg>
-        Войти</a>
+        <a href class="account__login main__menu__link">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+              fill="white"/>
+          </svg>
+          Войти</a>
 
-      <div class="main__header__search">
-        <form action="#" method="get" id="search">
-          <button class="btn-none">
-            <label for="main-search-input" aria-label="Поиск">
-              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="6.8678" height="1.71695"
-                      transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-                      fill="white"/>
-              </svg>
-            </label>
-          </button>
-          <label for="search-input" style="display: none" aria-label="Поиск"></label>
-          <input type="text" id="search-input" placeholder="Поиск по сайту">
-        </form>
+        <div class="main__header__search">
+          <form action="#" method="get" id="search" aria-label="Поиск">
+            <button class="btn-none">
+              <label for="main-search-input" aria-label="Поиск">
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="6.8678" height="1.71695"
+                        transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                        fill="white"/>
+                </svg>
+              </label>
+            </button>
+            <label class="is-hidden" for="search-input" aria-label="Поиск"></label>
+            <input type="text" id="search-input" placeholder="Поиск по сайту">
+          </form>
+        </div>
+
       </div>
-
     </div>
+  </div>
 
-    <div class="header__sub">
-      <ul class="header__sub__menu">
-        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Реализм</a></li>
-        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Импрессионизм</a></li>
-        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Постимпрессионизм</a></li>
-        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Авангард</a></li>
-        <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Футуризм</a></li>
-      </ul>
+  <div class="header__menu_sub_bg">
+    <div class="wrapper">
 
-      <div class="header__search">
-        <form action="#" method="get" id="main-search">
-          <button class="btn-none">
-            <label for="main-search-input" aria-label="Поиск">
+
+      <div class="header__sub">
+        <ul class="header__sub__menu">
+          <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Реализм</a></li>
+          <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Импрессионизм</a></li>
+          <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Постимпрессионизм</a></li>
+          <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Авангард</a></li>
+          <li class="sub__menu__item"><a href="#" class="main__menu__link sub__menu__link">Футуризм</a></li>
+        </ul>
+
+        <div class="header__search">
+          <form action="#" method="get" id="main-search">
+            <button class="btn-none" tabindex="-1" placeholder="NoTabIndex">
               <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695"
                       transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
@@ -100,16 +110,17 @@
                       d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
                       fill="white"/>
               </svg>
-            </label>
-          </button>
-          <input type="text" id="main-search-input" placeholder="Поиск по сайту">
-        </form>
+            </button>
+            <input type="text" id="main-search-input" placeholder="Поиск по сайту">
+            <label class="is-hidden" for="main-search-input" aria-label="Поиск" tabindex="-1"
+                   placeholder="NoTabIndex"></label>
+          </form>
+        </div>
       </div>
 
     </div>
   </div>
-
-  <div class="dropdown is-hidden" id="dd-scroll" data-simplebar>
+  <div class="dropdown is-hidden" id="dd-scroll" data-simplebar data-simplebar-scroll-bar-max="20">
     <ul class="dropdown__menu">
       <li class="dropdown__menu__item">
         <img class="dropdown__menu__img" src="img/dd/1.png" alt="картинка">
@@ -146,47 +157,43 @@
     </ul>
 
   </div>
-  <noscript>
-    <style>
-      [data-simplebar] {
-        overflow: auto;
-      }
-    </style>
-  </noscript>
 
 </header>
 
 <main>
   <section class="section hero">
-    <div class="wrapper">
 
-      <!-- Slider main container -->
-      <div class="swiper-hero swiper-container">
-        <!-- Additional required wrapper -->
+    <!-- Slider main container -->
+    <div class="swiper-hero swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="wrapper">
+        <div class="hero-content">
 
-        <h2 class="hero__title" data-swiper-parallax-opacity="1" data-swiper-parallax-scale="1" data-swiper-parallax="0"
-            data-swiper-parallax-duration="500">Прикоснитесь к прекрасному</h2>
-        <div
-          class="hero__desc">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
-        </div>
+          <h2 class="hero__title" data-swiper-parallax-opacity="1" data-swiper-parallax-scale="1"
+              data-swiper-parallax="0"
+              data-swiper-parallax-duration="500">Прикоснитесь к прекрасному</h2>
+          <p
+            class="hero__desc">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+          </p>
 
-        <button class="btn btn-hero">Подписаться на рассылку</button>
-
-
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <img src="img/birmingham1.png" alt="Слайд 1">
-          </div>
-          <div class="swiper-slide">
-            <img src="img/birmingham2.jpg" alt="Слайд 2">
-          </div>
-          <div class="swiper-slide">
-            <img src="img/birmingham3.png" alt="Слайд 3">
-          </div>
+          <button class="btn btn-hero">Подписаться на рассылку</button>
         </div>
 
       </div>
+
+      <div class="swiper-wrapper swiper-wrapper-abs">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="img/birmingham1.png" alt="Слайд 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/birmingham2.jpg" alt="Слайд 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/birmingham3.png" alt="Слайд 3">
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -224,7 +231,7 @@
             <option value="4">Автор 4</option>
           </select>
           <label class="gallery__label" for="gallery-form-direction" aria-label="Выбор автора">Выбор направления</label>
-          <select class="gallery__select" name="" id="gallery-form-direction" style="visibility: hidden;">
+          <select class="gallery__select is-vis-hidden" name="" id="gallery-form-direction">
             <option value="none" hidden>Выбор направления</option>
             <option value="1">направление 1</option>
             <option value="2">направление 2</option>
@@ -233,7 +240,7 @@
           </select>
           <label class="gallery__label" for="gallery-form-tech"
                  aria-label="Выбор автора">Выбор техники исполнения</label>
-          <select class="gallery__select" name="" id="gallery-form-tech" style="visibility: hidden;">
+          <select class="gallery__select is-vis-hidden" name="" id="gallery-form-tech">
             <option value="0" hidden>Выбор техники исполнения</option>
             <option value="1">исполнения 1</option>
             <option value="2">исполнения 2</option>
@@ -318,12 +325,30 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at autem consequatur eligendi enim natus necessitatibus officia provident quo repellendus sequi, voluptatibus! Aut autem dignissimos dolorem odit quibusdam suscipit, veniam?</p>
       <div class="catalog__columns">
 
-        <div class="catalog__column-left">
-          <img class="catalog__ingo__img" src="img/image3.jpg" alt="картина">
+        <div class="catalog__column-left is-hidden" data-target="unknown">
+          <img class="catalog__ingo__img" src="img/catalog/unknown.jpg" alt="картина">
+          <div class="catalog__info__header">Данного художника ещё нет в каталоге</div>
+          <div class="catalog__info__sub"></div>
+          <div
+            class="catalog__info__text">К сожалению, информация про данного художника мы ещё не внесли в католог.
+          </div>
+        </div>
+
+        <div class="catalog__column-left" data-target="dominenko">
+          <img class="catalog__ingo__img" src="img/catalog/image3.jpg" alt="картина">
           <div class="catalog__info__header">Доменико Гирландайо</div>
           <div class="catalog__info__sub">2 июня 1448 — 11 января 1494.</div>
           <div
             class="catalog__info__text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+          </div>
+        </div>
+
+        <div class="catalog__column-left  is-hidden" data-target="verrokkuq">
+          <img class="catalog__ingo__img" src="img/catalog/img035.jpg" alt="картина">
+          <div class="catalog__info__header">Андреа Верроккьо</div>
+          <div class="catalog__info__sub">1435 — 10 октября 1488</div>
+          <div
+            class="catalog__info__text">скульптор и живописец эпохи Возрождения, представитель Флорентийской школы. Среди его учеников — Сандро Боттичелли, Пьетро Перуджино, Леонардо да Винчи и Лоренцо ди Креди.
           </div>
         </div>
 
@@ -334,7 +359,7 @@
             </div>
             <div class="accordion__body">
               <ul class="catalog__list">
-                <li class="catalog__list__item">Бенедетто ди Биндо</li>
+                <li class="catalog__list__item"><a class="catalog__list__link">Бенедетто ди Биндо</a></li>
                 <li class="catalog__list__item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list__item">Биссоло, Франческо</li>
                 <li class="catalog__list__item">Больтраффио, Джованни</li>
@@ -344,8 +369,9 @@
                 <li class="catalog__list__item">Бреа, Людовико</li>
                 <li class="catalog__list__item">Бьяджо д’Антонио Туччи</li>
                 <li class="catalog__list__item">Веккьетта</li>
-                <li class="catalog__list__item">Андреа Верроккьо</li>
-                <li class="catalog__list__item catalog__list__item-active">Доменико Гирландайо</li>
+                <li class="catalog__list__item" data-path="verrokkuq">Андреа Верроккьо</li>
+                <li class="catalog__list__item catalog__list__item-active" data-path="dominenko">Доменико Гирландайо
+                </li>
                 <li class="catalog__list__item">Беноццо Гоццоли</li>
                 <li class="catalog__list__item">Граначчи, Франческо</li>
                 <li class="catalog__list__item">Грегорио ди Чекко</li>
@@ -948,15 +974,15 @@
 
         <div class="swiper-project swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide project-slide"><img src="img/projects/project-9.svg" alt="проеки 1"></div>
-            <div class="swiper-slide project-slide"><img src="img/projects/project-8.svg" alt="проеки 2"></div>
-            <div class="swiper-slide project-slide"><img src="img/projects/project-5.svg" alt="проеки 3"></div>
-            <div class="swiper-slide project-slide"><img src="img/projects/project-4.svg" alt="проеки 4"></div>
-            <div class="swiper-slide project-slide"><img src="img/projects/project-3.svg" alt="проеки 5"></div>
-            <div class="swiper-slide project-slide"><img src="img/projects/project-6.svg" alt="проеки 6"></div>
-            <div class="swiper-slide project-slide"><img src="img/projects/project-7.svg" alt="проеки 7"></div>
-            <div class="swiper-slide project-slide"><img src="img/projects/project-2.svg" alt="проеки 8"></div>
-            <div class="swiper-slide project-slide"><img src="img/projects/project-1.svg" alt="проеки 9"></div>
+            <div class="swiper-slide project-slide"><img src="img/projects/project-9.png" alt="проеки 1"></div>
+            <div class="swiper-slide project-slide"><img src="img/projects/project-8.png" alt="проеки 2"></div>
+            <div class="swiper-slide project-slide"><img src="img/projects/project-5.png" alt="проеки 3"></div>
+            <div class="swiper-slide project-slide"><img src="img/projects/project-4.png" alt="проеки 4"></div>
+            <div class="swiper-slide project-slide"><img src="img/projects/project-3.png" alt="проеки 5"></div>
+            <div class="swiper-slide project-slide"><img src="img/projects/project-6.png" alt="проеки 6"></div>
+            <div class="swiper-slide project-slide"><img src="img/projects/project-7.png" alt="проеки 7"></div>
+            <div class="swiper-slide project-slide"><img src="img/projects/project-2.png" alt="проеки 8"></div>
+            <div class="swiper-slide project-slide"><img src="img/projects/project-1.png" alt="проеки 9"></div>
           </div>
 
         </div>
@@ -967,27 +993,41 @@
   </section>
 
   <section class="section contact">
-    <h2 class="title">Контакты</h2>
-    <div class="columns">
-      <div class="contacts__column__left">
-        <div class="address__name">Шоурум №4</div>
-        <address>Леонтьевский переулок, дом 5, строение 1</address>
-        <div class="address__desc">Заказать обратный звонок</div>
-        <form action="#" method="post">
-          <label class="gallery__label" for="contact__form__name">Имя</label>
-          <input class="contact__form-input" type="text" id="contact__form__name" placeholder="Имя *" required>
-          <label class="gallery__label" for="contact__form__phone">Телефон</label>
-          <input class="contact__form-input" type="text" id="contact__form__phone" placeholder="Телефон *" required>
-          <submit class="btn btn-contact">Заказать</submit>
-        </form>
-        <div class="address__desc bottom">Связаться в один клик</div>
-        <div class="contact__icon icon__wa"></div>
-        <div class="contact__icon icon__telegram"></div>
-      </div>
+    <div class="wrapper">
+      <h2 class="title">Контакты</h2>
+    </div>
 
-      <div class="contacts__column__right">
+    <div class="wrapper__border">
+      <div class="wrapper">
+        <div class="columns">
+          <div class="contacts__column__left">
 
-        <div id="YMapsID"></div>
+            <div class="address__name">Шоурум №4</div>
+            <address>Леонтьевский переулок, дом 5, строение 1</address>
+            <div class="address__desc">Заказать обратный звонок</div>
+            <form action="/" method="post" id="click_to_call">
+              <label class="gallery__label" for="contact__form__name">Имя</label>
+              <div class="just-validate-tooltip-container">
+                <input class="contact__form-input" type="text" id="contact__form__name" name="phone"
+                       placeholder="Имя *" data-validate-field="name">
+              </div>
+              <label class="gallery__label" for="contact__form__phone">Телефон</label>
+              <div class="just-validate-tooltip-container">
+                <input class="contact__form-input" type="text" id="contact__form__phone" name="phone"
+                       placeholder="Телефон *" data-validate-field="phone">
+              </div>
+              <button type="submit" class="btn btn-contact">Заказать</button>
+            </form>
+            <div class="address__desc bottom">Связаться в один клик</div>
+            <a class="contact__icon icon__wa" href="https://www.whatsapp.com/"></a>
+            <a class="contact__icon icon__telegram" href="https://telegram.org/"></a>
+          </div>
+
+        </div>
+        <div class="contacts__column__right">
+
+          <div id="YMapsID"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -999,9 +1039,9 @@
     <a href="/"><img src="img/logo.svg" alt="Лого"></a>
   </div>
   <div class="social__icons">
-    <div class="footer__icon icon__vk"></div>
-    <div class="footer__icon icon__instagram"></div>
-    <div class="footer__icon icon__facebook"></div>
+    <button class="footer__icon icon__vk"></button>
+    <button class="footer__icon icon__instagram"></button>
+    <button class="footer__icon icon__facebook"></button>
   </div>
 </footer>
 

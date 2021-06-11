@@ -17,7 +17,11 @@ const hero = new Swiper('.swiper-hero', {
 
 });
 
-new SimpleBar(document.getElementById('dd-scroll'));
+const simpleBar = new SimpleBar(document.getElementById('dd-scroll'), {
+  scrollbarMinSize: 20,
+  scrollbarMaxSize: 30,
+})
+// simpleBar.recalculate()
 
 const gallery = new Swiper('.swiper-gallery', {
   slidesPerView: 1,
@@ -153,6 +157,34 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.catalog__list__item').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      let path = e.currentTarget.dataset.path;
+      console.log(path);
+
+      // меняем на табе
+      document.querySelectorAll('.catalog__list__item').forEach(function (link) {
+        link.classList.remove('catalog__list__item-active');
+      })
+      e.currentTarget.classList.add('catalog__list__item-active');
+
+      // показываем таб
+      document.querySelectorAll('.catalog__column-left').forEach(function (link) {
+        link.classList.add('is-hidden');
+      })
+
+      let el = document.querySelector(`[data-target="${path}"]`)
+      console.log(el)
+      console.log(typeof el)
+      if (el == null) {
+        el = document.querySelector(`[data-target="unknown"]`)
+      }
+      el.classList.remove('is-hidden');
+    })
+  })
+})
+
 function close_modal() {
   modal_gallery.classList.remove('is-active');
 }
@@ -161,11 +193,11 @@ let myMap;
 
 function init() {
   myMap = new ymaps.Map(document.getElementById("YMapsID"), {
-      center: [55.759927, 37.644897],
-      zoom: 13,
-      // autoFitToViewport: 'always',
-      controls: []
-    }),
+    center: [55.759927, 37.644897],
+    zoom: 13,
+    // autoFitToViewport: 'always',
+    controls: []
+  }),
 
     myPoint = new ymaps.Placemark([55.758463, 37.601079], {}, {
       iconLayout: 'default#image',
@@ -196,7 +228,7 @@ $(function () {
 
     // перестраиваем карту, если убрать задержку, то карта криво встает
     YMapsID.style.display = 'none';
-    setTimeout(function(){
+    setTimeout(function () {
       YMapsID.style.display = 'block';
       myMap.container.fitToViewport([true]);
     }, 10);
@@ -339,5 +371,30 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
-
+// валидация
+new window.JustValidate('#click_to_call', {
+  tooltip: {fadeOutTime: 3000,},
+  rules: {
+    name: {required: true, minLength: 3},
+    phone: {
+      required: true,
+      function: (name, value) => {
+        let phone = value.replace(/[^\d]+/g, '');
+        return phone.length == 11;
+      }
+    },
+  },
+  submitHandler: function (form, values, ajax) {
+    console.log(values)
+    ajax({
+      url: 'https://just-validate-api.herokuapp.com/submit',
+      method: 'POST',
+      data: values,
+      async: true,
+      callback: (response) => {
+        console.log(response);
+      }
+    });
+  },
+});
 
