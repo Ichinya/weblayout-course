@@ -17,6 +17,11 @@ const hero = new Swiper('.swiper-hero', {
 
 });
 
+const element = document.querySelector('.js-choice');
+const choices = new Choices(element, {
+  searchEnabled: false
+});
+
 const simpleBar = new SimpleBar(document.getElementById('dd-scroll'), {
   scrollbarMinSize: 20,
   scrollbarMaxSize: 30,

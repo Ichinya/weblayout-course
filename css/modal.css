@@ -57,7 +57,7 @@
 }
 
 .delete::before, .modal-close::before, .delete::after, .modal-close::after {
-  background-color: white;
+  background-color: black;
   content: "";
   display: block;
   left: 50%;
@@ -111,6 +111,15 @@
   min-width: 32px;
   width: 32px;
 }
+
+.is-large.modal-close:hover::before, .is-large.modal-close:focus::before, .is-large.modal-close:hover::after, .is-large.modal-close:focus::after {
+  background-color: #9D5CD0;
+}
+
+.is-large.modal-close:active::before, .is-large.modal-close:active::before {
+  background-color: #7943A4;
+}
+
 .modal {
   align-items: center;
   display: none;
