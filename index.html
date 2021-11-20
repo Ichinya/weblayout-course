@@ -42,13 +42,26 @@
         <span class="header__close-span"></span>
       </button>
       <ul class="menu-burger__list">
-        <li class="menu-burger__item"><a href="#section-about" class="main__menu__link menu-burger__link">О нас</a></li>
-        <li class="menu-burger__item"><a href="#section-gallery" class="main__menu__link menu-burger__link">Галерея</a></li>
-        <li class="menu-burger__item"><a href="#section-catalog" class="main__menu__link menu-burger__link">Каталог</a></li>
-        <li class="menu-burger__item"><a href="#section-event" class="main__menu__link menu-burger__link">События</a></li>
-        <li class="menu-burger__item"><a href="#section-publications" class="main__menu__link menu-burger__link">Издания</a></li>
-        <li class="menu-burger__item"><a href="#section-projects" class="main__menu__link menu-burger__link">Проекты</a></li>
-        <li class="menu-burger__item"><a href="#section-contacts" class="main__menu__link menu-burger__link">Контакты</a></li>
+        <li class="menu-burger__item">
+          <a href="#section-about" class="main__menu__link menu-burger__link">О нас</a></li>
+        <li class="menu-burger__item">
+          <a href="#section-gallery" class="main__menu__link menu-burger__link">Галерея</a>
+        </li>
+        <li class="menu-burger__item">
+          <a href="#section-catalog" class="main__menu__link menu-burger__link">Каталог</a>
+        </li>
+        <li class="menu-burger__item">
+          <a href="#section-event" class="main__menu__link menu-burger__link">События</a>
+        </li>
+        <li class="menu-burger__item">
+          <a href="#section-publications" class="main__menu__link menu-burger__link">Издания</a>
+        </li>
+        <li class="menu-burger__item">
+          <a href="#section-projects" class="main__menu__link menu-burger__link">Проекты</a>
+        </li>
+        <li class="menu-burger__item">
+          <a href="#section-contacts" class="main__menu__link menu-burger__link">Контакты</a>
+        </li>
         <li class="menu-burger__item">
           <button class="menu-burger__btn">
             Войти
@@ -102,12 +115,6 @@
         </form>
       </div>
 
-      <div class="section-hero__content">
-        <h1 class="section-hero__title">Прикоснитесь к прекрасному</h1>
-        <p
-          class="section-hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-        <button class="btn btn-to-footer">Подписаться на рассылку</button>
-      </div>
     </div>
   </div>
   <div class="header__bottom">
@@ -201,12 +208,23 @@
 </header>
 <main>
   <section class="section-hero swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide section-hero__slide" id="hero-slide1"></div>
-      <div class="swiper-slide section-hero__slide" id="hero-slide2"></div>
-      <div class="swiper-slide section-hero__slide" id="hero-slide3"></div>
+    <div class="swiper swiper-hero">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide section-hero__slide" id="hero-slide1"></div>
+        <div class="swiper-slide section-hero__slide" id="hero-slide2"></div>
+        <div class="swiper-slide section-hero__slide" id="hero-slide3"></div>
+      </div>
+
+    </div>
+    <div class="section-hero__content">
+      <h1 class="section-hero__title">Прикоснитесь к прекрасному</h1>
+      <p class="section-hero__text">
+        Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+      </p>
+      <button class="btn btn-to-footer">Подписаться на рассылку</button>
     </div>
   </section>
+
   <section class="section-about" id="section-about" aria-label="О Нас">
     <div class="wrapper section-about__container">
       <h2 class="section-about__heading section-heading">О нас</h2>
@@ -215,566 +233,678 @@
       </p>
     </div>
   </section>
+
   <section class="section-gallery" id="section-gallery" aria-label="Галерея">
+
     <div class="wrapper section-gallery__container">
-      <h2 class="section-gallery__head section-heading">Галерея</h2>
       <div class="section-gallery__wrap">
         <div class="section-gallery__select-custom select-custom">
+          <h2 class="section-gallery__head section-heading">Галерея</h2>
           <div class="select-custom__wrap">
-            <p class="select-custom__heading">Фильтровать по:</p>
+            <p class="select-custom__heading">Фильтр:</p>
             <select name="select" id="selectCustom">
               <option value="">Живопись</option>
               <option>Рисунок</option>
               <option>Скульптура</option>
             </select>
           </div>
+          <div class="section-gallery__desc">
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+            <a class="link" href="">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+          </div>
         </div>
         <div class="section-gallery__slider slider-gallery">
           <div class="swiper-container section-gallery__slider-container">
-            <div class="slider-gallery__navigation">
-              <div class="swiper-button-prev slider-gallery__click slider-gallery__click-left"></div>
-              <div class="swiper-pagination slider-gallery__number"></div>
-              <div class="swiper-button-next slider-gallery__click slider-gallery__click-right"></div>
-            </div>
-            <!-- <div class="swiper-pagination"></div> -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle69-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle69-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle70.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle70.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_70.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_70.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_70.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
+            <div class="gallery">
+              <div class="slider-gallery__navigation">
+                <div class="swiper-button-prev slider-gallery__click slider-gallery__click-left"></div>
+                <div class="gallery-pagination"></div>
+                <div class="swiper-button-next slider-gallery__click slider-gallery__click-right"></div>
               </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle70-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle70-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle72.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle72.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_72.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_72.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_72.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
+
+              <div class="swiper-gallery swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle69-min.webp" media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle69-min.jpg" media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle70.webp" media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle70.jpg" media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_70.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_70.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_70.jpg" alt="картина" loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide section-gallery__swiper-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle70-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle70-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle72.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle72.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_72.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_72.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_72.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle72-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle72-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle69.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle69.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_69.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_69.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_69.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle73-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle73-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle73.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle73.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_73.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_73.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_73.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle137-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle137-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle68.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle68.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_68.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_68.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_68.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle139-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle139-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle71.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle71.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_71.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_71.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_71.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle138-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle138-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle98.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle98.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_3.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_3.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_3.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle140-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle140-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle100.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle100.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_5.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_5.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_5.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle141-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle141-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle92.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle92.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_1.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_1.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_1.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle144-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle144-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle94.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle94.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_4.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_4.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_4.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle142-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle142-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle102.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle102.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_2.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_2.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_2.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle143-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle143-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle96.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle96.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_6.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_6.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_6.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle147-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle147-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle99.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle99.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_77.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_77.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_77.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle145-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle145-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle101.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle101.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_78.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_78.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_78.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle148-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle148-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle93.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle93.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_74.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_74.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_74.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle146-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle146-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle95.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle95.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_75.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_75.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_75.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle150-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle150-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle103.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle103.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_79.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_79.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_79.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle149-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle149-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle97.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle97.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/rectangle_76.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_76.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_76.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle159-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle159-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle86.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle86.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_80-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_80-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_80-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle157-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle157-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle88.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle88.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_81-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_81-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_81-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle153-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle153-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle80.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle80.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_82-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_82-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_82-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle151-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle151-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle82.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle82.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_83-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_83-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_83-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle155-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle155-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle90.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle90.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_84-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_84-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_84-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle161-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle161-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle84.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle84.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_85-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_85-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_85-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle160-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle160-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle87.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle87.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_86-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_86-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_86-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle158-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle158-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle89.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle89.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_87-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_87-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_87-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle152-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle152-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle81.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle81.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_88-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_88-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_88-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle154-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle154-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle83.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle83.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_89-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_89-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_89-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle162-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle162-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle91.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle91.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_90-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_90-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_90-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide gallery-slide">
+                    <div class="slider-gallery__item" tabindex="0">
+                      <picture>
+                        <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle156-min.webp"
+                                media="(max-width: 480px)">
+                        <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle156-min.jpg"
+                                media="(max-width: 480px)">
+                        <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle85.webp"
+                                media="(max-width: 991px)">
+                        <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle85.jpg"
+                                media="(max-width: 991px)">
+                        <source type="image/webp" srcset="img/gallery/Rectangle_91-min.webp">
+                        <source type="image/jpeg" srcset="img/gallery/Rectangle_91-min.jpg">
+                        <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_91-min.jpg" alt="картина"
+                             loading="lazy">
+                      </picture>
+                      <div class="slider-gallery__box">
+                        <div class="slider-gallery__loupe"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle72-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle72-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle69.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle69.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_69.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_69.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_69.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle73-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle73-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle73.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle73.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_73.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_73.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_73.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle137-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle137-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle68.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle68.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_68.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_68.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_68.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle139-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle139-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle71.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle71.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_71.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_71.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_71.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle138-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle138-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle98.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle98.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_3.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_3.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_3.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle140-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle140-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle100.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle100.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_5.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_5.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_5.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle141-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle141-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle92.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle92.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_1.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_1.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_1.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle144-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle144-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle94.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle94.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_4.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_4.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_4.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle142-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle142-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle102.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle102.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_2.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_2.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_2.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle143-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle143-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle96.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle96.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_6.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_6.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_6.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle147-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle147-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle99.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle99.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_77.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_77.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_77.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle145-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle145-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle101.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle101.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_78.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_78.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_78.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle148-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle148-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle93.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle93.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_74.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_74.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_74.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle146-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle146-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle95.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle95.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_75.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_75.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_75.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle150-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle150-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle103.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle103.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_79.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_79.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_79.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle149-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle149-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle97.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle97.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/rectangle_76.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_76.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_76.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle159-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle159-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle86.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle86.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_80-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_80-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_80-min.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle157-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle157-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle88.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle88.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_81-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_81-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_81-min.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle153-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle153-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle80.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle80.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_82-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_82-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_82-min.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle151-min.webp" media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle151-min.jpg" media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle82.webp" media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle82.jpg" media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_83-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_83-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_83-min.jpg" alt="картина" loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle155-min.webp"
-                            media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle155-min.jpg"
-                            media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle90.webp"
-                            media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle90.jpg"
-                            media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_84-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_84-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_84-min.jpg" alt="картина"
-                         loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle161-min.webp"
-                            media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle161-min.jpg"
-                            media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle84.webp"
-                            media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle84.jpg"
-                            media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_85-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_85-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_85-min.jpg" alt="картина"
-                         loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle160-min.webp"
-                            media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle160-min.jpg"
-                            media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle87.webp"
-                            media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle87.jpg"
-                            media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_86-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_86-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_86-min.jpg" alt="картина"
-                         loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle158-min.webp"
-                            media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle158-min.jpg"
-                            media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle89.webp"
-                            media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle89.jpg"
-                            media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_87-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_87-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_87-min.jpg" alt="картина"
-                         loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle152-min.webp"
-                            media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle152-min.jpg"
-                            media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle81.webp"
-                            media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle81.jpg"
-                            media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_88-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_88-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_88-min.jpg" alt="картина"
-                         loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle154-min.webp"
-                            media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle154-min.jpg"
-                            media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle83.webp"
-                            media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle83.jpg"
-                            media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_89-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_89-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_89-min.jpg" alt="картина"
-                         loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle162-min.webp"
-                            media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle162-min.jpg"
-                            media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle91.webp"
-                            media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle91.jpg"
-                            media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_90-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_90-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_90-min.jpg" alt="картина"
-                         loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section-gallery__swiper-slide">
-                <div class="slider-gallery__item" tabindex="0">
-                  <picture>
-                    <source type="image/webp" srcset="img/adaptive/320/gallery/Rectangle156-min.webp"
-                            media="(max-width: 480px)">
-                    <source type="image/jpeg" srcset="img/adaptive/320/gallery/Rectangle156-min.jpg"
-                            media="(max-width: 480px)">
-                    <source type="image/webp" srcset="img/adaptive/768/gallery/Rectangle85.webp"
-                            media="(max-width: 991px)">
-                    <source type="image/jpeg" srcset="img/adaptive/768/gallery/Rectangle85.jpg"
-                            media="(max-width: 991px)">
-                    <source type="image/webp" srcset="img/gallery/Rectangle_91-min.webp">
-                    <source type="image/jpeg" srcset="img/gallery/Rectangle_91-min.jpg">
-                    <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_91-min.jpg" alt="картина"
-                         loading="lazy">
-                  </picture>
-                  <div class="slider-gallery__box">
-                    <div class="slider-gallery__loupe"></div>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
         </div>
-        <div class="section-gallery__desc">
-          Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="link"
-                                                                                                href="">авторизуйтесь</a>, либо воспользуйтесь лицензией.
-        </div>
       </div>
+
+
     </div>
   </section>
+
   <section class="section-catalog" id="section-catalog" aria-label="Каталог">
     <div class="wrapper section-catalog__container">
-      <h2 class="section-catalog__headeng section-heading">Каталог</h2>
-      <p
-        class="section-catalog__text">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. </p>
-      <div class="section-catalog__tabs tabs">
+      <div class="section-catalog__title">
+        <h2 class="section-catalog__headeng section-heading">Каталог</h2>
         <ul class="tabs__list">
           <li class="tabs__item">
             <button class="tabs__btn tabs__btnFr" data-path="one" aria-label="Франция"></button>
@@ -792,6 +922,11 @@
             <button class="tabs__btn tabs__btnBl" data-path="five" aria-label="Бельгия"></button>
           </li>
         </ul>
+      </div>
+
+      <p class="section-catalog__text">
+        Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. </p>
+      <div class="section-catalog__tabs tabs">
         <div class="tabs__content" data-target="one">
           <div class="tabs__painter-desc painter-desc" data-target="benedetto1"></div>
           <div class="tabs__painter-desc painter-desc" data-target="bergonie1"></div>
@@ -1366,52 +1501,50 @@
   <section class="section-event" id="section-event" aria-label="События">
     <div class="wrapper section-event__container">
       <h2 class="section-event__headeng section-heading">События</h2>
-      <div class="section-event__wrapper">
-        <ul class="section-event__list">
-          <li class="events__card event-card1">
+      <div class="swiper section-event__wrapper">
+        <div class="swiper-wrapper section-event__list">
+          <div class="swiper-slide events__card event-card1 ">
             <div class="event-card__content">
               <div class="event-card__top">
                 <span class="event-card__label">Музей им. Щусева с&nbsp;20&nbsp;марта по 30 апреля</span>
                 <h3 class="event-card__title">Книжная гравюра в живом восприятии</h3>
-                <p
-                  class="event-card__desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                <p class="event-card__desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
               </div>
               <div class="event-card__bottom">
                 <a href="" class="event-card__more focus">Подробнее</a>
               </div>
             </div>
-          </li>
-          <li class="events__card event-card2">
+          </div>
+          <div class="swiper-slide events__card event-card2 ">
             <div class="event-card__content">
               <div class="event-card__top">
                 <span class="event-card__label event-card__label2">ММОМА 24&nbsp;марта&nbsp;19:00</span>
                 <h3 class="event-card__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
-                <p
-                  class="event-card__desc">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+                <p class="event-card__desc">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
               </div>
               <div class="event-card__bottom">
                 <a href="" class="event-card__more focus">Подробнее</a>
               </div>
             </div>
-          </li>
-          <li class="events__card event-card3">
+          </div>
+          <div class="swiper-slide events__card event-card3 ">
             <div class="event-card__content">
               <div class="event-card__top">
                 <span class="event-card__label">Еврейский музей с&nbsp;31&nbsp;марта по 21 апреля</span>
                 <h3 class="event-card__title">Выставка «Формация 2020»</h3>
-                <p
-                  class="event-card__desc">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+                <p class="event-card__desc">
+                  Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
+                </p>
               </div>
               <div class="event-card__bottom">
                 <a href="" class="event-card__more focus">Подробнее</a>
               </div>
             </div>
-          </li>
-          <li class="events__card event-card4 hidden fadeInUp">
+          </div>
+          <div class="swiper-slide events__card event-card4 ">
             <div class="event-card__content">
               <div class="event-card__top">
-                <span
-                  class="event-card__label event-card__label4">Третьяковка на Крымском валу с 30 марта по 30 апреля</span>
+                <span class="event-card__label event-card__label4">Третьяковка на Крымском валу с 30 марта по 30 апреля</span>
                 <h3 class="event-card__title">XXIV Международная биеннале молодого искусства</h3>
                 <p
                   class="event-card__desc">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
@@ -1420,33 +1553,35 @@
                 <a href="" class="event-card__more focus">Подробнее</a>
               </div>
             </div>
-          </li>
-          <li class="events__card event-card5 hidden fadeInUp">
+          </div>
+          <div class="swiper-slide events__card event-card5 ">
             <div class="event-card__content">
               <div class="event-card__top">
                 <span class="event-card__label">ММАМ с&nbsp;8&nbsp;апреля&nbsp;по&nbsp;20&nbsp;мая</span>
                 <h3 class="event-card__title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-                <p
-                  class="event-card__desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                <p class="event-card__desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
               </div>
               <div class="event-card__bottom">
                 <a href="" class="event-card__more focus">Подробнее</a>
               </div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
+
+        <div class="swiper-pagination-bullet"></div>
+
+        <div class="swiper-event-button-prev"></div>
+        <div class="swiper-event-button-next"></div>
+
       </div>
-      <div class="swiper-pagination-event"></div>
-      <div class="section-event__wrap-button">
-        <button class="section-event__btn">Все события</button>
-      </div>
+
     </div>
   </section>
   <section class="section-publications" id="section-publications" aria-label="Издания">
     <div class="wrapper section-publications__container">
-      <h2 class="section-publications__headeng section-heading">Издания</h2>
       <div class="section-publications__wrap">
         <div class="section-publications__checkbox checkbox">
+          <h2 class="section-publications__headeng section-heading">Издания</h2>
           <h3 class="checkbox__title checkbox__title__cat">Категории</h3>
           <ul class="checkbox__list">
             <li class="checkbox__item is-none checkbox__media-col1">
@@ -1558,14 +1693,14 @@
               </button>
             </li>
           </ul>
-        </div>
-        <div class="section-publications__price price">
+          <div class="section-publications__price price">
+          </div>
           <h3 class="checkbox__title checkbox__title__price">Цена</h3>
           <div class="magazines__filter-border">
             <label for="magazine__from"><span>От </span></label>
-            <input class="magazines__filter-input" id="magazine__from" type="number" name="min-price" placeholder="50">
+            <input class="magazines__filter-input" id="magazine__from" type="text" name="min-price" placeholder="50">
             <label for="magazine__to"><span>до </span></label>
-            <input class="magazines__filter-input" id="magazine__to" type="number" name="min-price" placeholder="25 000"> руб.
+            <input class="magazines__filter-input" id="magazine__to" type="text" name="min-price" placeholder="25 000"> руб.
           </div>
         </div>
         <div class="section-publications__slider slider-publications">
@@ -1586,12 +1721,12 @@
                        class="slider-publications__img lazyload">
                 </picture>
                 <div class="slider-publications__heading">
-                  <h4 class="slider-pulications__title">Искусство цвета</h4>
-                  <span class="slider-pulications__price">620 руб</span>
+                  <h4 class="slider-publications__title">Искусство цвета</h4>
+                  <span class="slider-publications__price">620 руб</span>
                 </div>
-                <span class="slider-pulications__author">Иттен, Иоханнес</span>
+                <span class="slider-publications__author">Иттен, Иоханнес</span>
                 <div class="slider-publications__button">
-                  <button class="slider-pulications__btn">Заказать</button>
+                  <button class="slider-publications__btn">Заказать</button>
                 </div>
               </div>
               <div class="swiper-slide magazine__slide">
@@ -1602,12 +1737,12 @@
                        class="slider-publications__img lazyload">
                 </picture>
                 <div class="slider-publications__heading">
-                  <h4 class="slider-pulications__title">Типографика</h4>
-                  <span class="slider-pulications__price">2 450 руб</span>
+                  <h4 class="slider-publications__title">Типографика</h4>
+                  <span class="slider-publications__price">2 450 руб</span>
                 </div>
-                <span class="slider-pulications__author">Рудер, Эмиль</span>
+                <span class="slider-publications__author">Рудер, Эмиль</span>
                 <div class="slider-publications__button">
-                  <button class="slider-pulications__btn">Заказать</button>
+                  <button class="slider-publications__btn">Заказать</button>
                 </div>
               </div>
               <div class="swiper-slide magazine__slide">
@@ -1618,12 +1753,12 @@
                        class="slider-publications__img lazyload">
                 </picture>
                 <div class="slider-publications__heading">
-                  <h4 class="slider-pulications__title">Книга про буквы</h4>
-                  <span class="slider-pulications__price">2 200 руб</span>
+                  <h4 class="slider-publications__title">Книга про буквы</h4>
+                  <span class="slider-publications__price">2 200 руб</span>
                 </div>
-                <span class="slider-pulications__author">Гордон, Юрий</span>
+                <span class="slider-publications__author">Гордон, Юрий</span>
                 <div class="slider-publications__button">
-                  <button class="slider-pulications__btn">Заказать</button>
+                  <button class="slider-publications__btn">Заказать</button>
                 </div>
               </div>
               <div class="swiper-slide magazine__slide">
@@ -1634,12 +1769,12 @@
                        class="slider-publications__img lazyload">
                 </picture>
                 <div class="slider-publications__heading">
-                  <h4 class="slider-pulications__title">Николай Ильин</h4>
-                  <span class="slider-pulications__price">1 100 руб</span>
+                  <h4 class="slider-publications__title">Николай Ильин</h4>
+                  <span class="slider-publications__price">1 100 руб</span>
                 </div>
-                <span class="slider-pulications__author">Кричевский, Владимир</span>
+                <span class="slider-publications__author">Кричевский, Владимир</span>
                 <div class="slider-publications__button">
-                  <button class="slider-pulications__btn">Заказать</button>
+                  <button class="slider-publications__btn">Заказать</button>
                 </div>
               </div>
               <div class="swiper-slide magazine__slide">
@@ -1650,12 +1785,12 @@
                        alt="Модульные сетки в графическом дизайне" class="slider-publications__img lazyload">
                 </picture>
                 <div class="slider-publications__heading">
-                  <h4 class="slider-pulications__title">Модульные сетки в граф...</h4>
-                  <span class="slider-pulications__price">1 450 руб</span>
+                  <h4 class="slider-publications__title">Модульные сетки в граф...</h4>
+                  <span class="slider-publications__price">1 450 руб</span>
                 </div>
-                <span class="slider-pulications__author">Мюллер-Брокманн, Йозеф</span>
+                <span class="slider-publications__author">Мюллер-Брокманн, Йозеф</span>
                 <div class="slider-publications__button">
-                  <button class="slider-pulications__btn">Заказать</button>
+                  <button class="slider-publications__btn">Заказать</button>
                 </div>
               </div>
               <div class="swiper-slide magazine__slide">
@@ -1666,12 +1801,12 @@
                        class="slider-publications__img lazyload">
                 </picture>
                 <div class="slider-publications__heading">
-                  <h4 class="slider-pulications__title">Эволюция графических ст...</h4>
-                  <span class="slider-pulications__price">3 200 руб</span>
+                  <h4 class="slider-publications__title">Эволюция графических ст...</h4>
+                  <span class="slider-publications__price">3 200 руб</span>
                 </div>
-                <span class="slider-pulications__author">Хеллер, Чваст</span>
+                <span class="slider-publications__author">Хеллер, Чваст</span>
                 <div class="slider-publications__button">
-                  <button class="slider-pulications__btn">Заказать</button>
+                  <button class="slider-publications__btn">Заказать</button>
                 </div>
               </div>
               <div class="swiper-slide magazine__slide">
@@ -1682,12 +1817,12 @@
                        class="slider-publications__img lazyload">
                 </picture>
                 <div class="slider-publications__heading">
-                  <h4 class="slider-pulications__title">Искусство и визуальное в...</h4>
-                  <span class="slider-pulications__price">2 200 руб</span>
+                  <h4 class="slider-publications__title">Искусство и визуальное в...</h4>
+                  <span class="slider-publications__price">2 200 руб</span>
                 </div>
-                <span class="slider-pulications__author">Арнхейм, Рудольф</span>
+                <span class="slider-publications__author">Арнхейм, Рудольф</span>
                 <div class="slider-publications__button">
-                  <button class="slider-pulications__btn">Заказать</button>
+                  <button class="slider-publications__btn">Заказать</button>
                 </div>
 
               </div>
@@ -1832,7 +1967,7 @@
       <div class="section-contacts__wrap">
         <div class="section-contacts__form form">
           <h3 class="form__header">Шоурум №4</h3>
-          <address class="form__address">Леонтьевский переулок, дом 5, строение&nbsp;1</address>
+          <address class="form__address">Леонтьевский переулок, дом 5/1</address>
           <h4 class="address__desc">Заказать обратный звонок</h4>
           <form class="form__wrap" id="form" autocomplete="on">
             <div class="form__group">

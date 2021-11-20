@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //если это не кнопка и не само выпадающее меню, то удаляем класс
   //первое условие необходимо добавить, чтобы незацикливать появление->исчезновение класса
   document.addEventListener('click', function (event) {
-    if (!event.target.classList.contains('nav-direction__link') && !event.target.classList.contains('nav-direction__scroll')) {
+    if (!event.target.classList.contains('header__sub__link') && !event.target.classList.contains('header__sub__scroll')) {
       buttonDrop.forEach(function (e) {
         e.classList.remove('activ')
       })
@@ -163,15 +163,27 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   });
 
-  let swiperSectionHero = new Swiper('.section-hero.swiper-container', {
-    effect: 'fade',
-    loop: true,
+  const swiper = new Swiper('.swiper-hero', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 2000,
     autoplay: {
-      delay: 4000,
+      delay: 2000
     },
-    speed: 1000,
-    spaceBetween: 30,
-  });
+    effect: "fade",
+    allowTouchMove: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: '.swiper-bullet-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+
+  })
 
   const element = document.querySelector('#selectCustom');
   const choices = new Choices(element, {
@@ -181,94 +193,67 @@ document.addEventListener('DOMContentLoaded', function () {
     shouldSort: false
   });
 
-  var swiper = new Swiper('.section-gallery__slider-container', {
-
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-      clickable: true,
-      observer: true,
-      resizeObserver: true,
-      centeredSlides: true,
+  const gallery = new Swiper('.swiper-gallery', {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    grid: {
+      rows: 2
     },
+    spaceBetween: 30,
+    slidesPerColumn: 2,
+    slidesPerColumnFill: 'row',
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.slider-gallery__click-right',
+      prevEl: '.slider-gallery__click-left',
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true
+    pagination: {
+      el: '.gallery-pagination',
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+        return '<span class="' + currentClass + '"></span> / <span class="' + totalClass + '"></span>';
+      }
     },
+    watchOverflow: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        grid: {
+          rows: 1
+        },
+        spaceBetween: 0
+      },
+      576: {
+        slidesPerView: 2,
+        grid: {
+          rows: 2
+        },
+        spaceBetween: 30
+      },
+
+      1200: {
+        slidesPerView: 3,
+        grid: {
+          rows: 2
+        },
+        spaceBetween: 50
+      }
+    },
+
     a11y: {
       prevSlideMessage: 'Предыдущий',
-      nextSlideMessage: 'Следующий слайд',
-      firstSlideMessage: 'Это первый слайд',
-      lastSlideMessage: 'Это последний слайд'
-    },
-    breakpoints: {
-      280: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        grid: {
-          rows: 1,
-        },
-      },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        grid: {
-          rows: 1,
-        },
-      },
-      481: {
-        slidesPerView: 1,
-        spaceBetween: 34,
-        slidesPerGroup: 1,
-        grid: {
-          rows: 2,
-        },
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 34,
-        slidesPerGroup: 2,
-        grid: {
-          rows: 2,
-        },
-      },
-      992: {
-        slidesPerView: 2,
-        spaceBetween: 34,
-        slidesPerGroup: 2,
-        grid: {
-          rows: 2,
-        },
-      },
-      1200: {
-        slidesPerView: 2,
-        spaceBetween: 50,
-        slidesPerGroup: 2,
-        grid: {
-          rows: 2,
-        },
-      },
-      1640: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-        slidesPerGroup: 3,
-        grid: {
-          rows: 2,
-        },
-      }
+      nextSlideMessage: 'Следующий',
     }
-  });
-
+  })
 
   $(function () {
     $(".tabs__accordion").accordion({
       collapsible: true,
-      heightStyle: 'content'
+      heightStyle: "content",
+      header: "h3",
+      classes: {
+        "ui-accordion-header": ".tabs__painter-desc",
+      }
     });
   });
 
@@ -371,13 +356,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  let button = document.querySelector('.section-event__btn');
-  button.addEventListener('click', function () {
-    document.querySelectorAll('.hidden').forEach(function (hiddenCard) {
-      hiddenCard.classList.remove('hidden')
-    })
-    this.classList.add('hidden')
-  });
 
   const mediaQuery = window.matchMedia('(max-width: 991px)');
 
@@ -404,10 +382,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function handleTabletChange480(e) {
     if (e.matches) {
-      document.querySelector('.section-event__list').classList.add('swiper-wrapper');
-      document.querySelectorAll('.events__card').forEach(function (AllCard) {
-        AllCard.classList.add('swiper-slide');
-      })
 
       const accButton = document.querySelectorAll('button.accordion__btn');
       for (let button of accButton) {
@@ -447,13 +421,12 @@ document.addEventListener('DOMContentLoaded', function () {
         itemCategories.forEach(item => { //перебираем каждый элемент списка категорий
 
           if ((!item.classList.contains('is-none')) && (!item.classList.contains('check-on'))) { //если нет класса с display=none и не включен чек бокс
-            item.classList.add('is-none') //скрываем елементы
+            item.classList.add('is-none') //скрываем элементы
           } else {
             item.classList.remove('is-none') //иначе все видимые
           }
         });
         flag = !flag;
-
 
         if (!firstCheck) {
           defCheck.classList.remove('is-none');
@@ -466,23 +439,15 @@ document.addEventListener('DOMContentLoaded', function () {
   mediaQuery480.addListener(handleTabletChange480);
   handleTabletChange480(mediaQuery480);
 
-//слайдер для мобильной версии
-  var swiperEvent = new Swiper('.section-event__wrapper', {
-    pagination: {
-      el: '.swiper-pagination-event',
-      type: 'bullets',
-      clickable: true,
-    },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true
-    },
+  const swiperEvent = new Swiper('.section-event__wrapper', {
     a11y: {
       prevSlideMessage: 'Предыдущий',
       nextSlideMessage: 'Следующий слайд',
       firstSlideMessage: 'Это первый слайд',
       lastSlideMessage: 'Это последний слайд'
     },
+    slidesPerView: 3,
+    spaceBetween: 50,
     breakpoints: {
       280: {
         slidesPerView: 1,
@@ -491,11 +456,28 @@ document.addEventListener('DOMContentLoaded', function () {
       480: {
         slidesPerView: 1,
         spaceBetween: 10
+      },
+      800: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      },
+      1920: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+
+        navigation: {
+          nextEl: '.swiper-event-button-next',
+          prevEl: '.swiper-event-button-prev',
+        }
       }
     }
   });
 
-  var swiper2 = new Swiper('.slider-publications__swiper-container', {
+  let swiper2 = new Swiper('.slider-publications__swiper-container', {
 
     navigation: {
       nextEl: '.swiper-button-next',
