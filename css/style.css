@@ -96,6 +96,10 @@ a:focus {
   border-color: var(--color-main-active);
 }
 
+.is-touch {
+  display: none;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -820,7 +824,7 @@ input.header__search__input::-ms-input-placeholder {
 /*------------ Section-Gallery --------------*/
 .section-gallery {
   position: relative;
-  padding-bottom: 70px;
+  padding-bottom: 69px;
   padding-top: 80px;
   width: 100%;
   min-width: 0;
@@ -1156,9 +1160,15 @@ input.header__search__input::-ms-input-placeholder {
 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
   content: '';
 }
-.section-event__wrapper {
+
+.event__container {
   position: relative;
 }
+
+.section-event__wrapper {
+  overflow: hidden;
+}
+
 .swiper-event-button-prev {
   position: absolute;
   display: inline-block;
@@ -1283,10 +1293,13 @@ input.header__search__input::-ms-input-placeholder {
   transform: rotate(-225deg);
 }
 
+.swiper-pagination-bullet {
+  display: none;
+}
 
 /*------------- Section-Catalog ------------------*/
 .section-catalog {
-  padding-top: 81px;
+  padding-top: 80px;
 }
 
 .section-catalog__container {
@@ -1872,12 +1885,11 @@ input.header__search__input::-ms-input-placeholder {
 /*-------------- Section-event ----------------*/
 .section-event {
   padding-top: 85px;
-  margin-bottom: 80px;
+  margin-bottom: 29px;
 }
 
 .section-event__list {
-  display: flex;
-  overflow: hidden;
+
 }
 
 .events__card {
@@ -1950,14 +1962,12 @@ input.header__search__input::-ms-input-placeholder {
 }
 
 .event-card__label {
-  align-self: flex-end;
   margin-bottom: 4px;
   width: 150px;
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
   color: #999999;
-  text-align: right;
 }
 
 .event-card__label2 {
@@ -1969,7 +1979,7 @@ input.header__search__input::-ms-input-placeholder {
 }
 
 .event-card__title {
-  margin: 0 0 4px;
+  margin: 8px 0 4px;
   font-size: 24px;
   font-weight: 600;
   line-height: var(--font-line-height-main);
@@ -2146,7 +2156,7 @@ input.header__search__input::-ms-input-placeholder {
 /*------------ Section-Publications ------------*/
 .section-publications {
   padding-top: 82px;
-  padding-bottom: 74px;
+  padding-bottom: 78px;
   color: var(--font-color-white);
 }
 
@@ -2292,8 +2302,8 @@ input.header__search__input::-ms-input-placeholder {
 }
 
 .magazines__filter-input {
-  margin-right: 4px;
-  padding: 3px 0 3px 8px;
+  margin-right: 5px;
+  padding: 3px 0 3px 10px;
   width: 73px;
   font-size: 16px;
   line-height: var(--font-line-height-main);
@@ -2422,9 +2432,8 @@ input.header__search__input::-ms-input-placeholder {
   justify-content: space-between;
   align-items: center;
   bottom: calc(100% + 15px);
-  margin-top: 11px;
+  margin-top: 15px;
   margin-bottom: 30px;
-  left: -7px;
   height: 35px;
   width: 150px;
   z-index: 10;
@@ -3119,7 +3128,6 @@ footer {
 
   /*---------------- Section-Event ---------------*/
   .section-event__list {
-    justify-content: center;
   }
 
   .events__card {
@@ -3328,9 +3336,9 @@ footer {
   }
 
   .section-hero__content {
-    top: 213px;
-    left: -6px;
     max-width: 670px;
+    padding: 0;
+    margin: 111px 0 112px 50px;
   }
 
   .section-hero__title {
@@ -3359,6 +3367,7 @@ footer {
   /*------------- Section-Gallery --------------*/
   .section-gallery {
     padding-top: 81px;
+    padding-bottom: 71px;
   }
 
   .no-webp .section-gallery {
@@ -3370,11 +3379,15 @@ footer {
   }
 
   .swiper-container.section-gallery__slider-container {
-    height: 594px;
+
   }
 
   .section-gallery__select-custom {
     width: 30.2%;
+  }
+
+  .section-gallery__wrap {
+    min-height: 0px;
   }
 
   .choices__list--single {
@@ -3408,7 +3421,7 @@ footer {
   }
 
   .section-gallery__desc {
-    max-width: 31%;
+    margin: auto auto 0;
   }
 
   .slider-gallery__navigation {
@@ -3487,7 +3500,8 @@ footer {
   }
 
   .event-card__title {
-    margin-bottom: 2px;
+    margin-top: 1px;
+    margin-bottom: 3px;
     line-height: 33px;
   }
 
@@ -3535,7 +3549,7 @@ footer {
   /*------------- Section-Publications ---------*/
   .section-publications {
     padding-top: 78px;
-    padding-bottom: 77px;
+    padding-bottom: 4px;
   }
 
   .section-publications__headeng {
@@ -3573,7 +3587,7 @@ footer {
   }
 
   .slider-publications__swiper-container {
-    height: 435px;
+
   }
 
   .magazine__slide img {
@@ -3781,7 +3795,7 @@ footer {
 
   /*----------- Section-Hero ----------------*/
   .section-hero__content {
-    top: 213px;
+
   }
 
   .section-hero__title {
@@ -3827,7 +3841,7 @@ footer {
   }
 
   .section-gallery__select-custom {
-    margin-bottom: 109px;
+    margin-bottom: 29px;
     width: 42%;
   }
 
@@ -3867,6 +3881,11 @@ footer {
   .section-gallery__desc {
     position: static;
     max-width: 100%;
+    display: none;
+  }
+
+  .is-touch {
+    display: block;
   }
 
   /*------------- Section-Catalog -----------*/
@@ -4072,15 +4091,15 @@ footer {
   .section-publications__slider {
     align-self: center;
     max-width: 614px;
+    margin-top: 22px;
   }
 
   .slider-publications__navigation {
-    left: -37px;
+    margin-bottom: 24px;
   }
 
   .section-publications__price {
     position: static;
-    margin-bottom: 96px;
     width: 100%;
   }
 
@@ -4890,12 +4909,6 @@ footer {
     width: 38% !important;
   }
 
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background: var(--color-gray);
-    opacity: 1;
-  }
 
   .swiper-pagination-bullet-active {
     background: #666;
@@ -5302,6 +5315,10 @@ footer {
     height: 45px;
   }
 
+  .header__container {
+    margin-top: 5px;
+  }
+
   .header__burger {
     width: 26px;
     height: 18px;
@@ -5382,8 +5399,9 @@ footer {
   }
 
   .section-hero__content {
-    top: 78px;
-    left: 4%;
+    top: 0;
+    margin-top: 34px;
+    margin-left: 27px;
     max-width: 266px;
     text-align: center;
   }
@@ -5470,6 +5488,14 @@ footer {
     margin-top: 6px;
   }
 
+  .gallery {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center
+  }
+
   .swiper-container.section-gallery__slider-container {
     height: 418px;
   }
@@ -5506,10 +5532,32 @@ footer {
 
   .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     width: 100%;
+    font-size: 18px;
+    margin-top: 4px;
   }
 
   .section-gallery__slider {
     margin-bottom: 14px;
+  }
+
+  .swiper-event-button-next {
+    display: none;
+  }
+
+  .swiper-event-button-prev {
+    display: none;
+  }
+
+  .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-pagination-bullet {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px !important;
   }
 
   /*--------------- Section-Catalog --------------*/
@@ -5670,7 +5718,8 @@ footer {
 
   .event-card__content {
     min-height: 485px;
-    padding: 19px 10px 54px 28px;
+    margin: 0;
+    padding: 19px 10px 48px 28px;
   }
 
   .event-card__title {
@@ -5700,6 +5749,7 @@ footer {
 
   .section-event__list {
     flex-wrap: nowrap;
+    margin-bottom: 21px;
   }
 
   .events__card {
@@ -5714,16 +5764,6 @@ footer {
     width: 40% !important;
   }
 
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background: var(--color-gray);
-    opacity: 1;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: #666;
-  }
 
   .swiper-pagination-bullet:focus {
     outline: none;
@@ -5732,11 +5772,12 @@ footer {
 
   /*------------ Section-Publications --------------*/
   .section-publications {
-    padding-bottom: 51px;
+    padding-bottom: 0px;
+    padding-top: 47px;
   }
 
   .section-publications__headeng {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .no-webp .section-publications {
@@ -5749,7 +5790,9 @@ footer {
 
   .section-publications__checkbox {
     padding-top: 2px;
-    margin-bottom: 18px;
+    margin: 0 auto 15px;
+    max-width: 90%;
+    width: 90%;
   }
 
   .checkbox__title__price {
@@ -5763,7 +5806,7 @@ footer {
   }
 
   .section-publications__price {
-    margin-bottom: 35px;
+    margin-bottom: 19px;
     position: static;
   }
 
@@ -5814,6 +5857,7 @@ footer {
 
   .section-publications__slider {
     max-width: 100%;
+    margin-left: 10%;
   }
 
   .slider-publications__swiper-container {
@@ -5823,7 +5867,6 @@ footer {
 
   .slider-publications__swiper-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
   }
@@ -5872,9 +5915,14 @@ footer {
     margin-bottom: 49px;
   }
 
+  .section-publications__container{
+    width: 100%;
+    max-width: 100%;
+    }
+
   /*------------------ Section-Projects ------------*/
   .section-projects {
-    padding-top: 52px;
+    padding-top: 50px;
   }
 
   .section-projects__slider-title {

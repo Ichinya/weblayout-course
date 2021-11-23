@@ -448,22 +448,34 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     slidesPerView: 3,
     spaceBetween: 50,
+    scrollbar: {
+      hide: true,
+    },
     breakpoints: {
       280: {
         slidesPerView: 1,
-        spaceBetween: 10
+        spaceBetween: 10,
+        clickable: true,
+        pagination: {
+          el: '.swiper-pagination-bullets',
+          type: 'bullets',
+        },
       },
       480: {
-        slidesPerView: 1,
-        spaceBetween: 10
+        slidesPerView: 2,
+        spaceBetween: 34,
+        navigation: {
+          nextEl: '.swiper-event-button-next',
+          prevEl: '.swiper-event-button-prev',
+        }
       },
       800: {
         slidesPerView: 3,
-        spaceBetween: 10,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-        },
+        spaceBetween: 27,
+        navigation: {
+          nextEl: '.swiper-event-button-next',
+          prevEl: '.swiper-event-button-prev',
+        }
       },
       1920: {
         slidesPerView: 3,
@@ -487,6 +499,7 @@ document.addEventListener('DOMContentLoaded', function () {
       enabled: true,
       onlyInViewport: true
     },
+
     a11y: {
       prevSlideMessage: 'Предыдущий',
       nextSlideMessage: 'Следующий слайд',
@@ -499,9 +512,9 @@ document.addEventListener('DOMContentLoaded', function () {
       clickable: true,
     },
     breakpoints: {
-      321: {
-        slidesPerView: 1,
-        spaceBetween: 10
+      300: {
+        slidesPerView: 2.3,
+        spaceBetween: 15
       },
       481: {
         slidesPerView: 2,
@@ -526,11 +539,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const mediaQueryPublications320 = window.matchMedia('(max-width: 320px)');
 
   function handleTabletChangePublications320(e) {
-    if (e.matches) {
-      //убираем сладер в публикациях
-      swiper2.destroy();
-      document.querySelector('.slider-publications__swiper-wrapper').classList.remove('swiper-wrapper');
-    }
+
   }
 
   mediaQueryPublications320.addListener(handleTabletChangePublications320);
