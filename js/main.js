@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   $('#burger').click(function () {
     $("#menu").show('slide', {direction: 'right'}, 300);
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "auto";
   });
   $('#burger__close').click(function () {
     $("#menu").hide('slide', {direction: 'right'}, 300);
@@ -193,16 +193,13 @@ document.addEventListener('DOMContentLoaded', function () {
     shouldSort: false
   });
 
-  const gallery = new Swiper('.swiper-gallery', {
+  new Swiper(".section-gallery__slider", {
     slidesPerView: 3,
     slidesPerGroup: 3,
     grid: {
       rows: 2
     },
     spaceBetween: 30,
-    slidesPerColumn: 2,
-    slidesPerColumnFill: 'row',
-
     navigation: {
       nextEl: '.slider-gallery__click-right',
       prevEl: '.slider-gallery__click-left',
@@ -214,7 +211,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return '<span class="' + currentClass + '"></span> / <span class="' + totalClass + '"></span>';
       }
     },
-    watchOverflow: true,
     breakpoints: {
       320: {
         slidesPerView: 1,
