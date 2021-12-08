@@ -220,20 +220,40 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 0
       },
       576: {
+        slidesPerView: 1,
+        grid: {
+          rows: 2
+        },
+        spaceBetween: 10
+      },
+      640: {
         slidesPerView: 2,
         grid: {
           rows: 2
         },
-        spaceBetween: 30
+        spaceBetween: 40
       },
-
+      800: {
+        slidesPerView: 2,
+        grid: {
+          rows: 2
+        },
+        spaceBetween: 50
+      },
       1200: {
+        slidesPerView: 2,
+        grid: {
+          rows: 2
+        },
+        spaceBetween: 50
+      },
+      1400: {
         slidesPerView: 3,
         grid: {
           rows: 2
         },
         spaceBetween: 50
-      }
+      },
     },
 
     a11y: {
@@ -447,15 +467,15 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollbar: {
       hide: true,
     },
+    pagination: {
+      el: '.swiper-pagination-bullets',
+      type: 'bullets',
+      clickable: true,
+    },
     breakpoints: {
       280: {
         slidesPerView: 1,
         spaceBetween: 10,
-        clickable: true,
-        pagination: {
-          el: '.swiper-pagination-bullets',
-          type: 'bullets',
-        },
       },
       480: {
         slidesPerView: 2,
@@ -509,10 +529,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     breakpoints: {
       300: {
-        slidesPerView: 2.3,
+        slidesPerView: 2.25,
         spaceBetween: 15
       },
-      481: {
+      321: {
         slidesPerView: 2,
         spaceBetween: 30
       },
