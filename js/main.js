@@ -217,28 +217,28 @@ document.addEventListener('DOMContentLoaded', function () {
         grid: {
           rows: 1
         },
-        spaceBetween: 0
+        spaceBetween: 1
       },
       576: {
         slidesPerView: 1,
         grid: {
-          rows: 2
+          rows: 1
         },
         spaceBetween: 10
       },
       640: {
+        slidesPerView: 1,
+        grid: {
+          rows: 1
+        },
+        spaceBetween: 5
+      },
+      700: {
         slidesPerView: 2,
         grid: {
           rows: 2
         },
         spaceBetween: 40
-      },
-      800: {
-        slidesPerView: 2,
-        grid: {
-          rows: 2
-        },
-        spaceBetween: 50
       },
       1200: {
         slidesPerView: 2,
@@ -248,6 +248,13 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 50
       },
       1400: {
+        slidesPerView: 2,
+        grid: {
+          rows: 2
+        },
+        spaceBetween: 50
+      },
+      1800: {
         slidesPerView: 3,
         grid: {
           rows: 2
@@ -459,8 +466,8 @@ document.addEventListener('DOMContentLoaded', function () {
     a11y: {
       prevSlideMessage: 'Предыдущий',
       nextSlideMessage: 'Следующий слайд',
-      firstSlideMessage: 'Это первый слайд',
-      lastSlideMessage: 'Это последний слайд'
+      firstSlideMessage: '',
+      lastSlideMessage: ''
     },
     slidesPerView: 3,
     spaceBetween: 50,
@@ -472,7 +479,15 @@ document.addEventListener('DOMContentLoaded', function () {
       type: 'bullets',
       clickable: true,
     },
+    navigation: {
+      nextEl: '.swiper-event-button-next',
+      prevEl: '.swiper-event-button-prev',
+    },
     breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
       280: {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -501,6 +516,15 @@ document.addEventListener('DOMContentLoaded', function () {
           nextEl: '.swiper-event-button-next',
           prevEl: '.swiper-event-button-prev',
         }
+      },
+      2000: {
+        slidesPerView: 4
+      },
+      2500: {
+        slidesPerView: 5
+      },
+      3250: {
+        slidesPerView: 6
       }
     }
   });
@@ -527,6 +551,7 @@ document.addEventListener('DOMContentLoaded', function () {
       type: 'fraction',
       clickable: true,
     },
+    spaceBetween: 48,
     breakpoints: {
       300: {
         slidesPerView: 2.25,
@@ -547,6 +572,15 @@ document.addEventListener('DOMContentLoaded', function () {
       1200: {
         slidesPerView: 3,
         spaceBetween: 48
+      },
+      2150: {
+        slidesPerView: 4,
+      },
+      2700: {
+        slidesPerView: 5
+      },
+      3250: {
+        slidesPerView: 6
       }
     }
   });
