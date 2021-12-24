@@ -110,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#input__search').classList.remove('fadeInLeft');
         document.querySelector('#header__btn-seach').classList.remove('is-active');
         document.querySelector('#header__btn-seach').classList.remove('fadeInLeft');
-
-
       })
     }
   }
@@ -123,17 +121,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function handleTabletChangeMax480(e) {
     if (e.matches) {
+      btn__callback.innerText = 'Заказать'
       document.querySelector('#header__btn-seach').addEventListener('click', function (e) {
         document.querySelector('.header__top').classList.add('add-Blur');
-        document.querySelector('.section-hero').style.height = "355px";
-        document.querySelector('.section-hero__content').style.top = "78px";
       });
       document.querySelector('#burger__search-close').addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector('.header__top').classList.remove('add-Blur');
-        document.querySelector('.section-hero').style.height = "310px";
-        document.querySelector('.section-hero__content').style.top = "78px";
       });
+    } else {
+      btn__callback.innerText = 'Заказать обратный звонок'
     }
 
 
@@ -173,10 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     effect: "fade",
     allowTouchMove: false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
+    navigation: {},
     pagination: {
       el: '.swiper-bullet-pagination',
       type: 'bullets',
@@ -212,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
     breakpoints: {
-      320: {
+      0: {
         slidesPerView: 1,
         grid: {
           rows: 1
@@ -462,7 +456,7 @@ document.addEventListener('DOMContentLoaded', function () {
   mediaQuery480.addListener(handleTabletChange480);
   handleTabletChange480(mediaQuery480);
 
-  const swiperEvent = new Swiper('.section-event__wrapper', {
+  new Swiper('.section-event__wrapper', {
     a11y: {
       prevSlideMessage: 'Предыдущий',
       nextSlideMessage: 'Следующий слайд',
@@ -529,11 +523,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  let swiper2 = new Swiper('.slider-publications__swiper-container', {
+  new Swiper('.slider-publications__swiper-container', {
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-publication-button-next',
+      prevEl: '.swiper-publication-button-prev',
     },
     keyboard: {
       enabled: true,
@@ -553,12 +547,16 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     spaceBetween: 48,
     breakpoints: {
-      300: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 1
+      },
+      240: {
         slidesPerView: 2.25,
         spaceBetween: 15
       },
       321: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 30
       },
       768: {
@@ -602,8 +600,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var swiper3 = new Swiper('.slider-projects__swiper-container', {
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: '.swiper-project-button-next',
+      prevEl: '.swiper-project-button-prev'
     },
     keyboard: {
       enabled: true,
@@ -927,6 +925,16 @@ function getYaMap() {
 
   window.onresize = function () {
     onResizeMap();
+
+    $('.header__logo').removeClass('move').removeClass('hidden')
+    $('.header__top').removeClass('add-Blur')
+
+    $('#input__search').removeClass('fadeInLeft').removeClass('is-active')
+    $('#header__btn-seach').removeClass('fadeInLeft').removeClass('is-active')
+    $('#burger__search-close').removeClass('is-active').removeClass('fadeInLeft')
+
+    $('#burger').removeClass('hidden')
+
   };
 
   myMap.geoObjects.add(myPlacemark);
