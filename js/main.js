@@ -69,12 +69,33 @@ document.addEventListener('DOMContentLoaded', function () {
           document.querySelector('#input__search').classList.add('is-active');
           document.querySelector('#input__search').classList.add('fadeInLeft');
           document.querySelector('.header__logo').classList.add('move');
+          document.querySelector('#burger__search-close').classList.add('is-active');
+          document.querySelector('#burger__search-close').classList.add('fadeInLeft');
+          document.querySelector('.main__header__search').classList.add('shift');
+
+          document.querySelector('#burger__search-close').addEventListener('click', function (e) {
+            e.preventDefault();
+            this.classList.remove('is-active');
+            this.classList.remove('fadeInLeft');
+            document.querySelector('.header__logo').classList.remove('hidden');
+            document.querySelector('.header__logo').classList.remove('move');
+            document.querySelector('#burger').classList.remove('hidden');
+            document.querySelector('#input__search').classList.remove('is-active');
+            document.querySelector('#input__search').classList.remove('fadeInLeft');
+            document.querySelector('#header__btn-seach').classList.remove('is-active');
+            document.querySelector('#header__btn-seach').classList.remove('fadeInLeft');
+            document.querySelector('.main__header__search').classList.remove('shift');
+          })
+
         } else {
           this.classList.remove('is-active');
           this.classList.remove('fadeInLeft');
           document.querySelector('#input__search').classList.remove('is-active');
           document.querySelector('#input__search').classList.remove('fadeInLeft');
           document.querySelector('.header__logo').classList.remove('move');
+          document.querySelector('#burger__search-close').classList.remove('is-active');
+          document.querySelector('#burger__search-close').classList.remove('fadeInLeft');
+          document.querySelector('.main__header__search').classList.remove('shift');
         }
       })
     }
@@ -97,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#input__search').classList.add('fadeInLeft');
         document.querySelector('#burger__search-close').classList.add('is-active');
         document.querySelector('#burger__search-close').classList.add('fadeInLeft');
+        document.querySelector('.main__header__search').classList.remove('shift');
       });
 
       document.querySelector('#burger__search-close').addEventListener('click', function (e) {
@@ -110,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#input__search').classList.remove('fadeInLeft');
         document.querySelector('#header__btn-seach').classList.remove('is-active');
         document.querySelector('#header__btn-seach').classList.remove('fadeInLeft');
+        document.querySelector('.main__header__search').classList.remove('shift');
       })
     }
   }
@@ -191,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slidesPerView: 3,
     slidesPerGroup: 3,
     grid: {
-      rows: 2
+      rows: 1
     },
     spaceBetween: 30,
     navigation: {
@@ -230,28 +253,28 @@ document.addEventListener('DOMContentLoaded', function () {
       700: {
         slidesPerView: 2,
         grid: {
-          rows: 2
+          rows: 1
         },
         spaceBetween: 40
       },
       1200: {
         slidesPerView: 2,
         grid: {
-          rows: 2
+          rows: 1
         },
         spaceBetween: 50
       },
       1400: {
         slidesPerView: 2,
         grid: {
-          rows: 2
+          rows: 1
         },
         spaceBetween: 50
       },
       1800: {
         slidesPerView: 3,
         grid: {
-          rows: 2
+          rows: 1
         },
         spaceBetween: 50
       },
@@ -324,10 +347,7 @@ document.addEventListener('DOMContentLoaded', function () {
       let target = event.target;
       target.classList.remove('tabs__shadow');
     });
-    tabsBtn.addEventListener('focus', function (event) {
-      let target = event.target;
-      target.classList.add('tabs__shadow');
-    });
+
     tabsBtn.addEventListener('blur', function (event) {
       let target = event.target;
       target.classList.remove('tabs__shadow');
@@ -932,6 +952,8 @@ function getYaMap() {
     $('#input__search').removeClass('fadeInLeft').removeClass('is-active')
     $('#header__btn-seach').removeClass('fadeInLeft').removeClass('is-active')
     $('#burger__search-close').removeClass('is-active').removeClass('fadeInLeft')
+
+    $('.main__header__search').classList.remove('shift')
 
     $('#burger').removeClass('hidden')
 

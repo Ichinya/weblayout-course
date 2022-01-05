@@ -109,6 +109,7 @@
         <form action="#" method="get" aria-label="Поиск">
           <button class="header__btn" id="header__btn-seach">
           </button>
+          <label class="hidden" for="input__search"></label>
           <input type="search" tabindex="-1" name="search" class="header__search__input" id="input__search">
           <button class="header__search-close" id="burger__search-close">
             <span class="header__search-span"></span>
@@ -201,6 +202,7 @@
                     fill="white"/>
             </svg>
           </button>
+          <label class="hidden" for="search"></label>
           <input type="search" name="search" class="header__search__input" id="search" placeholder="Поиск по сайту">
         </form>
       </div>
@@ -242,7 +244,7 @@
         <div class="section-gallery__select-custom select-custom">
           <h2 class="section-gallery__head section-heading">Галерея</h2>
           <div class="select-custom__wrap">
-            <p class="select-custom__heading">Фильтр:</p>
+            <label class="select-custom__heading" for="selectCustom">Фильтр:</label>
             <select name="select" id="selectCustom">
               <option value="">Живопись</option>
               <option>Рисунок</option>
@@ -250,8 +252,35 @@
             </select>
           </div>
           <div class="section-gallery__desc">
-            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-            <a class="link" href="">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+            <ul class="">
+              <li class="">
+                <label for="xix" class="checkbox__label">
+                  <input class="checkbox__input" type="checkbox" name="xix" id="xix">
+                  <span class="checkbox__text">XIX век</span>
+                </label>
+                <button class="checkbox__close">
+                  <span class="checkbox__close-span"></span>
+                </button>
+              </li>
+              <li class="">
+                <label for="xx" class="checkbox__label">
+                  <input class="checkbox__input" type="checkbox" name="xx" id="xx">
+                  <span class="checkbox__text">XX век</span>
+                </label>
+                <button class="checkbox__close">
+                  <span class="checkbox__close-span"></span>
+                </button>
+              </li>
+              <li class="">
+                <label for="xxi" class="checkbox__label">
+                  <input class="checkbox__input" type="checkbox" name="xxi" id="xxi">
+                  <span class="checkbox__text">Современность</span>
+                </label>
+                <button class="checkbox__close">
+                  <span class="checkbox__close-span"></span>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -274,9 +303,9 @@
                 <source type="image/jpeg" srcset="img/gallery/Rectangle_70.jpg">
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_70.jpg" alt="картина" loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -293,9 +322,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_72.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span  class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -312,9 +341,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_69.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -331,9 +360,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_73.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -350,9 +379,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_68.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -369,9 +398,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_71.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -388,9 +417,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_3.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -407,9 +436,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_5.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -426,9 +455,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_1.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -445,9 +474,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_4.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -464,9 +493,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_2.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -483,9 +512,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_6.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -502,9 +531,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_77.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -521,9 +550,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_78.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -540,9 +569,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_74.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -559,9 +588,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_75.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -578,9 +607,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_79.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -597,9 +626,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_76.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -616,9 +645,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_80-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -635,9 +664,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_81-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -654,9 +683,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_82-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -673,9 +702,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_83-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -692,9 +721,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_84-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -711,9 +740,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_85-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -730,9 +759,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_86-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -749,9 +778,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_87-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -768,9 +797,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_88-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -787,9 +816,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_89-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -806,9 +835,9 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_90-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
             <button class="swiper-slide gallery-slide slider-gallery__item" tabindex="0">
               <picture>
@@ -825,16 +854,12 @@
                 <img class="slider-gallery__img lazyload" src="img/gallery/Rectangle_91-min.jpg" alt="картина"
                      loading="lazy">
               </picture>
-              <div class="slider-gallery__box">
-                <div class="slider-gallery__loupe"></div>
-              </div>
+              <span class="slider-gallery__box">
+                <span class="slider-gallery__loupe"></span>
+              </span>
             </button>
           </div>
 
-        </div>
-        <div class="section-gallery__desc is-touch">
-          Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-          <a class="link" href="">авторизуйтесь</a>, либо воспользуйтесь лицензией.
         </div>
       </div>
 
@@ -1519,7 +1544,7 @@
 
     </div>
   </section>
-  <section class="section-publications" id="section-publications" aria-label="Издания">
+  <section class="section-publications hidden" id="section-publications" aria-label="Издания">
     <div class="wrapper section-publications__container">
       <div class="section-publications__wrap">
         <div class="section-publications__checkbox checkbox">
@@ -1782,7 +1807,7 @@
     <div class="wrapper section-projects__container">
       <h2 class="section-projects__headeng section-heading">Проекты</h2>
       <p class="section-projects__text">
-        Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно - пропагандистское
+        Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно- пропагандистское
         <span class="marker" id="marker1" tabindex="1" role="button"
               aria-label="Пример современных тенденций - современная методология разработки">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
