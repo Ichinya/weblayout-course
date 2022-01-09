@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const anchors = document.querySelectorAll('a.main__menu__link')
+  const anchors = document.querySelectorAll('a.main-menu-link')
 
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
           document.querySelector('.header__logo').classList.add('move');
           document.querySelector('#burger__search-close').classList.add('is-active');
           document.querySelector('#burger__search-close').classList.add('fadeInLeft');
-          document.querySelector('.main__header__search').classList.add('shift');
+          document.querySelector('.header__container-search').classList.add('shift');
 
           document.querySelector('#burger__search-close').addEventListener('click', function (e) {
             e.preventDefault();
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('#input__search').classList.remove('fadeInLeft');
             document.querySelector('#header__btn-seach').classList.remove('is-active');
             document.querySelector('#header__btn-seach').classList.remove('fadeInLeft');
-            document.querySelector('.main__header__search').classList.remove('shift');
+            document.querySelector('.header__container-search').classList.remove('shift');
           })
 
         } else {
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
           document.querySelector('.header__logo').classList.remove('move');
           document.querySelector('#burger__search-close').classList.remove('is-active');
           document.querySelector('#burger__search-close').classList.remove('fadeInLeft');
-          document.querySelector('.main__header__search').classList.remove('shift');
+          document.querySelector('.header__container-search').classList.remove('shift');
         }
       })
     }
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#input__search').classList.add('fadeInLeft');
         document.querySelector('#burger__search-close').classList.add('is-active');
         document.querySelector('#burger__search-close').classList.add('fadeInLeft');
-        document.querySelector('.main__header__search').classList.remove('shift');
+        document.querySelector('.header__container-search').classList.remove('shift');
       });
 
       document.querySelector('#burger__search-close').addEventListener('click', function (e) {
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#input__search').classList.remove('fadeInLeft');
         document.querySelector('#header__btn-seach').classList.remove('is-active');
         document.querySelector('#header__btn-seach').classList.remove('fadeInLeft');
-        document.querySelector('.main__header__search').classList.remove('shift');
+        document.querySelector('.header__container-search').classList.remove('shift');
       })
     }
   }
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   $('#burger').click(function () {
     $("#menu").show('slide', {direction: 'right'}, 300);
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "hidden";
   });
   $('#burger__close').click(function () {
     $("#menu").hide('slide', {direction: 'right'}, 300);
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
     shouldSort: false
   });
 
-  new Swiper(".section-gallery__slider", {
+  new Swiper(".section-gallery-slider", {
     slidesPerView: 3,
     slidesPerGroup: 3,
     grid: {
@@ -218,8 +218,8 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     spaceBetween: 30,
     navigation: {
-      nextEl: '.slider-gallery__click-right',
-      prevEl: '.slider-gallery__click-left',
+      nextEl: '.slider-gallery-click-right',
+      prevEl: '.slider-gallery-click-left',
     },
     pagination: {
       el: '.gallery-pagination',
@@ -292,17 +292,17 @@ document.addEventListener('DOMContentLoaded', function () {
       heightStyle: "content",
       header: "h3",
       classes: {
-        "ui-accordion-header": ".tabs__painter-desc",
+        "ui-accordion-header": ".tabs-painter-desc",
       }
     });
   });
 
-  document.querySelectorAll('.tabs__btn').forEach(function (tabsBtn) {
+  document.querySelectorAll('.tabs-btn').forEach(function (tabsBtn) {
     tabsBtn.addEventListener('click', function (event) {
-      document.querySelectorAll('.tabs__btn').forEach(function (tabsBtnActive) {
-        tabsBtnActive.classList.remove('tabs__btn-active')
+      document.querySelectorAll('.tabs-btn').forEach(function (tabsBtnActive) {
+        tabsBtnActive.classList.remove('tabs-btn-active')
       })
-      this.classList.add('tabs__btn-active')
+      this.classList.add('tabs-btn-active')
       const path = event.currentTarget.dataset.path
       document.querySelectorAll('.tabs__content').forEach(function (tabsContent) {
         tabsContent.classList.remove('tabs__content-active')
@@ -341,16 +341,16 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     tabsBtn.addEventListener('mouseover', function (event) {
       let target = event.target;
-      target.classList.add('tabs__shadow');
+      target.classList.add('tabs-shadow');
     });
     tabsBtn.addEventListener('mouseout', function (event) {
       let target = event.target;
-      target.classList.remove('tabs__shadow');
+      target.classList.remove('tabs-shadow');
     });
 
     tabsBtn.addEventListener('blur', function (event) {
       let target = event.target;
-      target.classList.remove('tabs__shadow');
+      target.classList.remove('tabs-shadow');
     });
   })
 
@@ -406,15 +406,6 @@ document.addEventListener('DOMContentLoaded', function () {
   mediaQuery.addListener(handleTabletChange);
   handleTabletChange(mediaQuery);
 
-
-  const defCheck = document.querySelector('.default-checkbox');
-// defCheck.classList.add('on-click');
-  if (defCheck.classList.contains('is-none')) {
-    defCheck.classList.remove('is-none')
-  }
-  const inputDefCheck = defCheck.querySelector('.checkbox__input');
-  inputDefCheck.setAttribute('checked', true)
-
   const mediaQuery480 = window.matchMedia('(max-width: 480px)');
 
   function handleTabletChange480(e) {
@@ -432,13 +423,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
 
-
-      const categories = document.querySelector('.checkbox__title__cat');
       const itemCategories = document.querySelectorAll('.checkbox__item');
-      const checkAll = document.querySelectorAll('.checkbox__input');
+      const checkAll = document.querySelectorAll('.checkbox-input');
       let flag = true;
       let firstCheck = false;
-      defCheck.classList.add('check-on');
 
       checkAll.forEach(check => { //перебираем все чекбоксы и вешаем на еих событие клик
         check.addEventListener('click', () => {
@@ -452,31 +440,13 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         })
       });
-      categories.addEventListener('click', () => {
-
-        categories.classList.toggle('on-click');
-        itemCategories.forEach(item => { //перебираем каждый элемент списка категорий
-
-          if ((!item.classList.contains('is-none')) && (!item.classList.contains('check-on'))) { //если нет класса с display=none и не включен чек бокс
-            item.classList.add('is-none') //скрываем элементы
-          } else {
-            item.classList.remove('is-none') //иначе все видимые
-          }
-        });
-        flag = !flag;
-
-        if (!firstCheck) {
-          defCheck.classList.remove('is-none');
-          firstCheck = true;
-        }
-      })
     }
   }
 
   mediaQuery480.addListener(handleTabletChange480);
   handleTabletChange480(mediaQuery480);
 
-  new Swiper('.section-event__wrapper', {
+  new Swiper('.section-event-wrapper', {
     a11y: {
       prevSlideMessage: 'Предыдущий',
       nextSlideMessage: 'Следующий слайд',
@@ -617,7 +587,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /*------------ Section-Projects -----------*/
 //   Slider Swiper
-  var swiper3 = new Swiper('.slider-projects__swiper-container', {
+  var swiper3 = new Swiper('.slider-projects-swiper-container', {
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-project-button-next',
@@ -735,7 +705,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 2000);
 
 
-  const cardGallery = document.querySelectorAll('.slider-gallery__item');
+  const cardGallery = document.querySelectorAll('.slider-gallery-item');
 
   for (let card of cardGallery) {
     card.addEventListener('click', function () {
@@ -816,7 +786,7 @@ document.addEventListener('DOMContentLoaded', function () {
       divErrorPhone.innerHTML = 'Недопустимый формат';
       divErrorPhone.style.color = '#D11616';
 
-      const formGroup = document.getElementsByClassName('form__group');
+      const formGroup = document.getElementsByClassName('form-input');
 
       if (document.querySelectorAll('.js-validate-error-label.error-name').length < 1) {
         formGroup[0].append(divErrorName);
@@ -892,7 +862,7 @@ function getYaMap() {
   var myMap = new ymaps.Map("myMap", {
     center: [55.7622, 37.6461],
     zoom: 14,
-    controls: []
+    controls: ['zoomControl']
   });
   var geolocationControl = new ymaps.control.GeolocationControl({
     options: {
@@ -953,7 +923,7 @@ function getYaMap() {
     $('#header__btn-seach').removeClass('fadeInLeft').removeClass('is-active')
     $('#burger__search-close').removeClass('is-active').removeClass('fadeInLeft')
 
-    $('.main__header__search').classList.remove('shift')
+    $('.header__container-search').classList.remove('shift')
 
     $('#burger').removeClass('hidden')
 
